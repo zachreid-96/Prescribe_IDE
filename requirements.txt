@@ -1,0 +1,4 @@
+customtkinter~=5.2.2
+Pygments~=2.19.2
+chlorophyll~=0.4.2
+pyparsing~=3.2.5
