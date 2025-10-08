@@ -18,7 +18,7 @@ class PrescribeLexer(RegexLexer):
             (r'[A-Z]{4}', Name.Variable),
             (r'\d+', Number.Integer),
             (r'[;,]', Punctuation),
-            (r'\s+', Text),
+            #(r'\s+', Text),
             (r'.', Error),  # fallback
         ],
     }
