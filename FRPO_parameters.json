@@ -1,0 +1,1990 @@
+{
+  "A1": {
+    "Environment": "Top Margin",
+    "Factory Setting": 0,
+    "Format": "FRPO A1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A1",
+    "Values": [
+      {
+        "Comment": "Integer value in inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A2": {
+    "Environment": "Top Margin",
+    "Factory Setting": 0,
+    "Format": "FRPO A2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A2",
+    "Values": [
+      {
+        "Comment": "Fraction value in 1/100 inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A3": {
+    "Environment": "Left Margin",
+    "Factory Setting": 0,
+    "Format": "FRPO A3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A3",
+    "Values": [
+      {
+        "Comment": "Integer value in inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A4": {
+    "Environment": "Left Margin",
+    "Factory Setting": 0,
+    "Format": "FRPO A4,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A4",
+    "Values": [
+      {
+        "Comment": "Fraction value in 1/100 inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A5": {
+    "Environment": "Page Length",
+    "Factory Setting": 13,
+    "Format": "FRPO A5,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A5",
+    "Values": [
+      {
+        "Comment": "Integer value in inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A6": {
+    "Environment": "Page Length",
+    "Factory Setting": 61,
+    "Format": "FRPO A6,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A6",
+    "Values": [
+      {
+        "Comment": "Fraction value in 1/100 inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A7": {
+    "Environment": "Page Width",
+    "Factory Setting": 13,
+    "Format": "FRPO A7,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A7",
+    "Values": [
+      {
+        "Comment": "Integer value in inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "A8": {
+    "Environment": "Page Width",
+    "Factory Setting": 61,
+    "Format": "FRPO A8,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "A8",
+    "Values": [
+      {
+        "Comment": "Fraction value in 1/100 inches",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "B0": {
+    "Environment": "Downloadable PCL font compression",
+    "Factory Setting": "0 (countries excluding Asia) or 1 (Asia)",
+    "Format": "FRPO B0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "B0",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "B7": {
+    "Environment": "Message language selection at power-on",
+    "Factory Setting": 1,
+    "Format": "FRPO B7,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "B7",
+    "Values": [
+      {
+        "Options": {
+          "0": "Automatically enters message language selection menu at the intital power-on. After a language is selected, B7=1 is set automatically.",
+          "1": "Does not automatically enter message language selection menu at power-on."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "B8": {
+    "Environment": "Default patter resolution (PAT, FPAT, GPAT)",
+    "Factory Setting": 0,
+    "Format": "FRPO B8,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "B8",
+    "Values": [
+      {
+        "Options": {
+          "0": "300 dpi",
+          "1": "600 dpi",
+          "2": "1200 dpi"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "C0": {
+    "Environment": "Copy Count",
+    "Factory Setting": 1,
+    "Format": "FRPO C0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "C0",
+    "Values": [
+      {
+        "Comment": "Number of copies to print: 1-999",
+        "Type": "range",
+        "max": 999,
+        "min": 1
+      }
+    ]
+  },
+  "C1": {
+    "Environment": "Page Orientation",
+    "Factory Setting": 0,
+    "Format": "FRPO C1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "C1",
+    "Values": [
+      {
+        "Options": {
+          "0": "Portrait",
+          "1": "Landscape"
+        },
+        "Type": "Enum"
+      }
+    ]
+  },
+  "C2": {
+    "Environment": "Middle two digits of power-up font",
+    "Factory Setting": "00",
+    "Format": "FRPO C2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "C2",
+    "Values": [
+      {
+        "Comment": "Middle two digits of power-up font",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "C3": {
+    "Environment": "Last two digits of power-up font",
+    "Factory Setting": "00",
+    "Format": "FRPO C3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "C3",
+    "Values": [
+      {
+        "Comment": "Last two digits of power-up font",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "C5": {
+    "Environment": "First two digits of power-up font",
+    "Factory Setting": "00",
+    "Format": "FRPO C5,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "C5",
+    "Values": [
+      {
+        "Comment": "First two digits of power-up font",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "C8": {
+    "Environment": "Last two digits of power-up font",
+    "Factory Setting": 0,
+    "Format": "FRPO C8,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "C8",
+    "Values": [
+      {
+        "Options": {
+          "0": "HP compatibility mode (Characters hgiher than 127 are not printed)",
+          "1": "Conventional mode (Characters higher than 127 are printed. Supported symbo sets: ISO-60, ISO-15, ISO-11, ISO-6, ISO-4, ISO-69, ISO-21, ISO-17, Symbol"
+        },
+        "Type": "Enum"
+      }
+    ]
+  },
+  "D0": {
+    "Environment": "Serial line control",
+    "Factory Setting": 0,
+    "Format": "FRPO D0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "D0",
+    "Values": [
+      {
+        "Options": {
+          "0": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is ignored.",
+          "1": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is valid.",
+          "2": "XON is not sent. Error is ignored.",
+          "3": "XON is not sent. Error is valid."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "D4": {
+    "Environment": "Print density",
+    "Factory Setting": 3,
+    "Format": "FRPO D4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "D4",
+    "Values": [
+      {
+        "Comment": "Number from 1 (Light) to 5 (Dark)",
+        "Type": "range",
+        "max": 5,
+        "min": 1
+      }
+    ]
+  },
+  "D5": {
+    "Environment": "Service status page",
+    "Factory Setting": 1,
+    "Format": "FRPO D5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "D5",
+    "Values": [
+      {
+        "Options": {
+          "0": "Not printed",
+          "1": "Printed"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "D6": {
+    "Environment": "Paper jam retry timing",
+    "Factory Setting": 0,
+    "Format": "FRPO D6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "D6",
+    "Values": [
+      {
+        "Options": {
+          "0": "End of page",
+          "1": "Fuser sensor activated",
+          "2": "Fuser sensor deactivated",
+          "3": "Page ejection",
+          "4": "Same as 0; non-engine-dependent"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "G0": {
+    "Environment": "Last two digits of power-up font",
+    "Factory Setting": 0,
+    "Format": "FRPO G0,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G0",
+    "Values": [
+      {
+        "Options": {
+          "0": "Mode A; formfeed to SP0",
+          "1": "Mode B; formfeed to SP0",
+          "10": "Mode A; no formfeed",
+          "11": "Mode B; no formfeed",
+          "12": "Fixed mode A; formfeed",
+          "13": "Fixed mode B; formfeed",
+          "14": "Fixed mode A; no formfeed",
+          "15": "Fixed mode B; no formfeed",
+          "2": "Mode A; no formfeed to SP0",
+          "3": "Mode B; no formfeed to SP0",
+          "4": "Fixed mode A; formfeed",
+          "5": "Fixed mode B; formfeed",
+          "6": "Fixed mode A; no formfeed",
+          "7": "Fixed mode B; no formfeed",
+          "8": "Mode A; formfeed",
+          "9": "Mode B; formfeed"
+        },
+        "Type": "Enum"
+      }
+    ]
+  },
+  "G1": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "01",
+    "Format": "FRPO G1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G1",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G2": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "02",
+    "Format": "FRPO G2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G2",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G3": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "03",
+    "Format": "FRPO G3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G3",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G4": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "04",
+    "Format": "FRPO G4,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G4",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G5": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "05",
+    "Format": "FRPO G5,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G5",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G6": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "06",
+    "Format": "FRPO G6,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G6",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G7": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "07",
+    "Format": "FRPO G7,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G7",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "G8": {
+    "Environment": "KC-GL pen width",
+    "Factory Setting": "08",
+    "Format": "FRPO G8,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "G8",
+    "Values": [
+      {
+        "Comment": "dot",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "H1": {
+    "Environment": "Serial interface baud rate",
+    "Factory Setting": 96,
+    "Format": "FRPO H1,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H1",
+    "Values": [
+      {
+        "Options": {
+          "11": "115200 bps",
+          "12": "1200 bps",
+          "19": "19200 bps",
+          "24": "2400 bps",
+          "3": "300 bps (not valid for some models)",
+          "38": "38400 bps",
+          "48": "4800 bps",
+          "57": "57600 bps",
+          "6": "600 bps (not valid for some models)",
+          "96": "9600 bps"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "H2": {
+    "Environment": "Serial interface data bits",
+    "Factory Setting": 8,
+    "Format": "FRPO H2,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H2",
+    "Values": [
+      {
+        "Options": {
+          "7": "7 or 8",
+          "8": "7 or 8"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "H3": {
+    "Environment": "Serial interface stop bits",
+    "Factory Setting": 1,
+    "Format": "FRPO H3,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H3",
+    "Values": [
+      {
+        "Options": {
+          "0": "1 or 2",
+          "1": "1 or 2"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "H4": {
+    "Environment": "Serial interface parity",
+    "Factory Setting": 0,
+    "Format": "FRPO H4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H4",
+    "Values": [
+      {
+        "Options": {
+          "0": "None",
+          "1": "Odd",
+          "2": "Even",
+          "3": "Ignore"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "H5": {
+    "Environment": "Serial interface protocol",
+    "Factory Setting": 0,
+    "Format": "FRPO H5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H5",
+    "Values": [
+      {
+        "Options": {
+          "0": "Combination of 1 and 3 below",
+          "1": "DTR, positive true",
+          "2": "DTR, negative true",
+          "3": "XON/XOFF",
+          "4": "ETX/ACK",
+          "5": "XON/XOFF recognized only as protocol"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "H8": {
+    "Environment": "Total host buffer size",
+    "Factory Setting": "5 (monochrome model), 10 (monochrome model with network Interface), or 12 (color model)",
+    "Format": "FRPO H8,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H8",
+    "Values": [
+      {
+        "Comment": "0 to 99 in units of the size defined by FRPO S5",
+        "Type": "range",
+        "max": 99,
+        "min": 1
+      }
+    ]
+  },
+  "H9": {
+    "Environment": "Form feed time-out value",
+    "Factory Setting": 6,
+    "Format": "FRPO H9,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "H9",
+    "Values": [
+      {
+        "Comment": "Value in unites of 5 seconds (0 to 99).",
+        "Type": "range",
+        "max": 99,
+        "min": 0
+      }
+    ]
+  },
+  "INIT": {
+    "Environment": "FRPO Initialize",
+    "Factory Setting": 1,
+    "Format": "FRPO INIT;",
+    "Interface": "None",
+    "Parameter": "INIT",
+    "Values": []
+  },
+  "I5": {
+    "Environment": "Sleep timer",
+    "Factory Setting": 1,
+    "Format": "FRPO I5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "I5",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "J0": {
+    "Environment": "Reduce/enlarge ration (Models supporting A3 size only)",
+    "Factory Setting": 0,
+    "Format": "FRPO J0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "J0",
+    "Values": [
+      {
+        "Options": {
+          "0": "100%",
+          "5": "70%",
+          "6": "81%",
+          "7": "86%",
+          "8": "94%",
+          "9": "98%"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "J9": {
+    "Environment": "KC-GL enlarge mode",
+    "Factory Setting": 0,
+    "Format": "FRPO J9,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "J9",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "A2",
+          "2": "A1",
+          "3": "A0",
+          "4": "B3",
+          "5": "B2",
+          "6": "B1",
+          "7": "B0"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "N0": {
+    "Environment": "KIR mode",
+    "Factory Setting": 2,
+    "Format": "FRPO N0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "N0",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "2": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "N4": {
+    "Environment": "Duplex mode",
+    "Factory Setting": 0,
+    "Format": "FRPO N4,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "N4",
+    "Values": [
+      {
+        "Options": {
+          "0": "Simplex mode",
+          "1": "Long-edge binding",
+          "2": "Short-edge binding"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "N5": {
+    "Environment": "Sleep timer time-out time",
+    "Factory Setting": 6,
+    "Format": "FRPO N5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "N5",
+    "Values": [
+      {
+        "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]",
+        "Type": "range",
+        "max": 48,
+        "min": 1
+      }
+    ]
+  },
+  "N6": {
+    "Environment": "Ecoprint level",
+    "Factory Setting": 0,
+    "Format": "FRPO N6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "N6",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "2": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "N7": {
+    "Environment": "Duplex",
+    "Factory Setting": 0,
+    "Format": "FRPO N7,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "N7",
+    "Values": [
+      {
+        "Options": {
+          "0": "Normal",
+          "1": "Reverse output pages",
+          "2": "Allow duplex from the MP tray",
+          "3": "Allow duplex from the MP tray; reversing the output pages"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "N8": {
+    "Environment": "Printing resolution",
+    "Factory Setting": 1,
+    "Format": "FRPO N8,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "N8",
+    "Values": [
+      {
+        "Options": {
+          "0": "300 dpi",
+          "1": "600 dpi",
+          "3": "1200 dpi"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "O0": {
+    "Environment": "Printing resolution",
+    "Factory Setting": 5,
+    "Format": "FRPO O0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "O0",
+    "Values": [
+      {
+        "Options": {
+          "0": "Normal",
+          "1": "High-speed",
+          "5": "Nibble (high)",
+          "70": "Auto (Negotiation)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P1": {
+    "Environment": "Default emulation mode",
+    "Factory Setting": 6,
+    "Format": "FRPO P1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P1",
+    "Values": [
+      {
+        "Options": {
+          "0": "Line Printer",
+          "1": "IBM Proprinter X24E",
+          "2": "Diablo 630",
+          "5": "Epson LQ-850",
+          "6": "HP LaserJet",
+          "8": "KC-GL",
+          "9": "KPDL"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P2": {
+    "Environment": "Carriage-return action",
+    "Factory Setting": 1,
+    "Format": "FRPO P2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P2",
+    "Values": [
+      {
+        "Options": {
+          "0": "Ignores 0x0d",
+          "1": "Carriage-return",
+          "2": "Carriage-return+linefeed"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P3": {
+    "Environment": "Carriage-return action",
+    "Factory Setting": 1,
+    "Format": "FRPO P3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P3",
+    "Values": [
+      {
+        "Options": {
+          "0": "Ignores 0x0d",
+          "1": "Linefeed",
+          "2": "Linefeed+carriage-return"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P4": {
+    "Environment": "Automatic emulation sensing",
+    "Factory Setting": 0,
+    "Format": "FRPO P4,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P4",
+    "Values": [
+      {
+        "Options": {
+          "0": "AES disabled",
+          "1": "AES enabled"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P5": {
+    "Environment": "Alternative emulation",
+    "Factory Setting": 6,
+    "Format": "FRPO P5,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P5",
+    "Values": [
+      {
+        "Options": {
+          "0": "Line Printer",
+          "1": "IBM Proprinter X24E",
+          "2": "Diablo 630",
+          "5": "Epson LQ-850",
+          "6": "HP LaserJet",
+          "8": "KC-GL"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P7": {
+    "Environment": "Automatic emulation switching trigger",
+    "Factory Setting": 10,
+    "Format": "FRPO P7,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "P7",
+    "Values": [
+      {
+        "Options": {
+          "0": "Page eject commands",
+          "1": "None",
+          "10": "Page eject commands; if AES fails, resolves to KPDL",
+          "2": "Page eject and Prescribe EXIT",
+          "4": "Prescibe EXIT",
+          "5": "Formfeed (^L)",
+          "6": "Page eject, Prescibe EXIT and formfeed",
+          "7": "Prescribe EXIT and formfeed",
+          "8": "Page eject commands; if AES fails, resolves to alterantive emulation (P5)",
+          "9": "None; if AES fails, resolves to alterantive emulation"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "P9": {
+    "Environment": "Command recognition character",
+    "Factory Setting": 6,
+    "Format": "FRPO P9,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "P9",
+    "Values": [
+      {
+        "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]",
+        "Type": "range",
+        "max": 48,
+        "min": 1
+      }
+    ]
+  },
+  "R0": {
+    "Environment": "Default stacker",
+    "Factory Setting": 1,
+    "Format": "FRPO R0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R0",
+    "Values": [
+      {
+        "Options": {
+          "1": "Face-down tray",
+          "2": "Face-up tray",
+          "3": "Bulk tray"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R2": {
+    "Environment": "Default paper size",
+    "Factory Setting": 0,
+    "Format": "FRPO R2,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R2",
+    "Values": [
+      {
+        "Options": {
+          "0": "Size of the default paper cassette (See R4)",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "3": "International DL (11 x 22 cm)",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R3": {
+    "Environment": "Default margin settings",
+    "Factory Setting": 0,
+    "Format": "FRPO R3,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R3",
+    "Values": [
+      {
+        "Options": {
+          "0": "HP compatible margins",
+          "1": "Full PCL printable area",
+          "10": "IBM HT reference point as the left margin",
+          "11": "Full PCL printable area for HP emulation; HT refernce point as the left margin in IBM emulation",
+          "12": "Uses Courier font for IBM emulation, using the pitch given by U2 and U3",
+          "2": "Character pitch given by U2 and U3",
+          "3": "Full PCL printable area with character pitches given by U2 and U3"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R4": {
+    "Environment": "Default cassette",
+    "Factory Setting": 1,
+    "Format": "FRPO R4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R4",
+    "Values": [
+      {
+        "Options": {
+          "0": "Multi-purpose tray",
+          "1": "Cassette 1",
+          "2": "Cassette 2",
+          "3": "Cassette 3",
+          "4": "Cassette 4",
+          "5": "Cassette 5",
+          "6": "Cassette 6",
+          "7": "Cassette 7",
+          "99": "Envelope/universal feeder (FS-9000)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R7": {
+    "Environment": "MP tray paper size",
+    "Factory Setting": 0,
+    "Format": "FRPO R7,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R7",
+    "Values": [
+      {
+        "Options": {
+          "0": "Maximum paper size of the printing system",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "3": "International DL (11 x 22 cm)",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R8": {
+    "Environment": "Daisywheel data length",
+    "Factory Setting": 7,
+    "Format": "FRPO R8,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R8",
+    "Values": [
+      {
+        "Options": {
+          "7": "7-bit",
+          "8": "8-bit"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "R9": {
+    "Environment": "Default envelope feeder paper size",
+    "Factory Setting": 0,
+    "Format": "FRPO R9,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "R9",
+    "Values": [
+      {
+        "Options": {
+          "0": "A4 or Letter",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "3": "International DL (11 x 22 cm)",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "S3": {
+    "Environment": "Sorter overfilling behavior",
+    "Factory Setting": 0,
+    "Format": "FRPO S3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "S3",
+    "Values": [
+      {
+        "Options": {
+          "0": "Interrupts printing until trays are emptied",
+          "1": "Bypasses printing to the face-down tray"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "S4": {
+    "Environment": "A4/Letter equation",
+    "Factory Setting": 0,
+    "Format": "FRPO S4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "S4",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "S5": {
+    "Environment": "Host buffer size",
+    "Factory Setting": 1,
+    "Format": "FRPO S5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "S5",
+    "Values": [
+      {
+        "Options": {
+          "0": "10kB (x H8)",
+          "1": "100kB (x H8)",
+          "2": "1024kB (x H8)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "S6": {
+    "Environment": "RAM disk capacity",
+    "Factory Setting": 50,
+    "Format": "FRPO S6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "S6",
+    "Values": [
+      {
+        "Comment": "Integer value of MB",
+        "Type": "range",
+        "max": 1024,
+        "min": 0
+      }
+    ]
+  },
+  "S7": {
+    "Environment": "Host buffer size",
+    "Factory Setting": 0,
+    "Format": "FRPO S7,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "S7",
+    "Values": [
+      {
+        "Options": {
+          "0": "Disabled",
+          "1": "Enabled"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "T1": {
+    "Environment": "Cassette 1 paper size",
+    "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+    "Format": "FRPO T1,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "T1",
+    "Values": [
+      {
+        "Options": {
+          "13": "A5",
+          "14": "A6",
+          "18": "INT B5",
+          "19": "CUSTOM",
+          "33": "Oficio II",
+          "4": "C5",
+          "40": "16K",
+          "5": "Executive",
+          "50": "Statement",
+          "51": "Folio",
+          "6": "Letter",
+          "7": "Legal",
+          "8": "A4",
+          "9": "B5"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "T2": {
+    "Environment": "Cassette 2 paper size",
+    "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+    "Format": "FRPO T2,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "T2",
+    "Values": [
+      {
+        "Options": {
+          "13": "A5",
+          "14": "A6",
+          "18": "INT B5",
+          "19": "CUSTOM",
+          "33": "Oficio II",
+          "4": "C5",
+          "40": "16K",
+          "5": "Executive",
+          "51": "Folio",
+          "6": "Letter",
+          "7": "Legal",
+          "8": "A4",
+          "9": "B5"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "T6": {
+    "Environment": "Wide A4",
+    "Factory Setting": 0,
+    "Format": "FRPO T6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "T6",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "T8": {
+    "Environment": "MP tray direction",
+    "Factory Setting": 1,
+    "Format": "FRPO T8,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "T8",
+    "Values": [
+      {
+        "Options": {
+          "0": "Short edge",
+          "1": "Long edge"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "U0": {
+    "Environment": "Line spacing",
+    "Factory Setting": 6,
+    "Format": "FRPO U0,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U0",
+    "Values": [
+      {
+        "Comment": "Lines per inch (integer value)",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "U1": {
+    "Environment": "Line spacing",
+    "Factory Setting": 0,
+    "Format": "FRPO U1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U1",
+    "Values": [
+      {
+        "Comment": "Lines per inch (fraction value)",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "U2": {
+    "Environment": "Character spacing",
+    "Factory Setting": 10,
+    "Format": "FRPO U2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U2",
+    "Values": [
+      {
+        "Comment": "Lines per inch (integer value)",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "U3": {
+    "Environment": "Character spacing",
+    "Factory Setting": 0,
+    "Format": "FRPO U3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U3",
+    "Values": [
+      {
+        "Comment": "Lines per inch (fraction value)",
+        "Type": "Integer"
+      }
+    ]
+  },
+  "U6": {
+    "Environment": "Country Code",
+    "Factory Setting": 0,
+    "Format": "FRPO U6,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U6",
+    "Values": [
+      {
+        "Options": {
+          "0": "US-ASCII",
+          "1": "France",
+          "10": "IBM PC-850 (Multilingual)",
+          "11": "IBM PC-860 (Portuguese)",
+          "12": "IBM PC-863 (Canadian French)",
+          "13": "IBM PC-865 (Norwegian)",
+          "14": "Normway",
+          "15": "Denmark 2",
+          "16": "Spain 2",
+          "17": "Latin America",
+          "2": "Germany",
+          "3": "UK",
+          "4": "Denmark",
+          "5": "Sweden",
+          "6": "Italy",
+          "7": "Spain",
+          "8": "Japan",
+          "9": "US Legal"
+        },
+        "Type": "enum"
+      },
+      {
+        "Comment": "HP PCL symbol set coding (see 7-37)",
+        "Type": "range",
+        "max": 99,
+        "min": 50
+      }
+    ]
+  },
+  "U8": {
+    "Environment": "Font pitch for fixed-pitch scalable fonts",
+    "Factory Setting": 10,
+    "Format": "FRPO U8,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U8",
+    "Values": [
+      {
+        "Comment": "Integer value in cpi: 0-99",
+        "Type": "range",
+        "max": 99,
+        "min": 0
+      }
+    ]
+  },
+  "U9": {
+    "Environment": "Font pitch for fixed-pitch scalable fonts",
+    "Factory Setting": 0,
+    "Format": "FRPO U9,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "U9",
+    "Values": [
+      {
+        "Comment": "Fraction value in 1/100 cpi: 0-99",
+        "Type": "range",
+        "max": 99,
+        "min": 0
+      }
+    ]
+  },
+  "V0": {
+    "Environment": "Font height for the default scalable font",
+    "Factory Setting": 0,
+    "Format": "FRPO V0,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "V0",
+    "Values": [
+      {
+        "Comment": "Integer value in 100 points: 0-9",
+        "Type": "range",
+        "max": 9,
+        "min": 0
+      }
+    ]
+  },
+  "V1": {
+    "Environment": "Font height for the default scalable font",
+    "Factory Setting": 12,
+    "Format": "FRPO V1,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "V1",
+    "Values": [
+      {
+        "Comment": "Integer value in points: 0-99",
+        "Type": "range",
+        "max": 99,
+        "min": 0
+      }
+    ]
+  },
+  "V2": {
+    "Environment": "Font height for the default scalable font",
+    "Factory Setting": 0,
+    "Format": "FRPO V2,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "V2",
+    "Values": [
+      {
+        "Options": {
+          "0": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "25": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "50": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "75": "Fraction value in 1/100 points: 0, 25, 50, 75"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "V3": {
+    "Environment": "Default scalable font",
+    "Factory Setting": "-",
+    "Format": "FRPO V3,#1;",
+    "Interface": "Interface Dependent",
+    "Parameter": "V3",
+    "Values": [
+      {
+        "Comment": "Name of typeface of up to 32 characters, enclosed with single or double quotation marks",
+        "Type": "String"
+      }
+    ]
+  },
+  "V9": {
+    "Environment": "Default Courier weight",
+    "Factory Setting": 0,
+    "Format": "FRPO V9,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "V9",
+    "Values": [
+      {
+        "Options": {
+          "0": "Dark",
+          "1": "Normal"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "W1": {
+    "Environment": "Color mode",
+    "Factory Setting": 1,
+    "Format": "FRPO W1,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "W1",
+    "Values": [
+      {
+        "Options": {
+          "0": "Monochrome (grayscale)",
+          "1": "Color (CMYK)",
+          "2": "Quick color (CMY)"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "W6": {
+    "Environment": "Gloss mode",
+    "Factory Setting": 0,
+    "Format": "FRPO W6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "W6",
+    "Values": [
+      {
+        "Options": {
+          "0": "Low (normal)",
+          "1": "High"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X0": {
+    "Environment": "Paper type for the MP tray",
+    "Factory Setting": 1,
+    "Format": "FRPO X0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X0",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "12": "Envelope",
+          "13": "Cardstock",
+          "14": "Coated Sheet",
+          "15": "Backing Sheet",
+          "16": "Thick Sheet",
+          "17": "High-quality Sheet",
+          "18": "Index Tabs",
+          "2": "Transparency",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "4": "Label",
+          "5": "Bond",
+          "6": "Recycle",
+          "7": "Vellum",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X1": {
+    "Environment": "Paper type for paper cassette 1",
+    "Factory Setting": 1,
+    "Format": "FRPO X1,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X1",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X2": {
+    "Environment": "Paper type for paper cassette 2",
+    "Factory Setting": 1,
+    "Format": "FRPO X2,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X2",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X3": {
+    "Environment": "Paper type for paper cassette 3",
+    "Factory Setting": 1,
+    "Format": "FRPO X3,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X3",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X4": {
+    "Environment": "Paper type for paper cassette 4",
+    "Factory Setting": 1,
+    "Format": "FRPO X4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X4",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X5": {
+    "Environment": "Paper type for paper cassette 5",
+    "Factory Setting": 1,
+    "Format": "FRPO X5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X5",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X6": {
+    "Environment": "Paper type for paper cassette 6",
+    "Factory Setting": 1,
+    "Format": "FRPO X6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X6",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "3": "Preprinted",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X7": {
+    "Environment": "Paper type for Envelope Feeder/Universal Feeder",
+    "Factory Setting": 1,
+    "Format": "FRPO X7,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X7",
+    "Values": [
+      {
+        "Options": {
+          "1": "Plain",
+          "10": "Color",
+          "11": "Prepunched",
+          "12": "Envelope",
+          "13": "Cardstock",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "3": "Preprinted",
+          "4": "Label",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "X9": {
+    "Environment": "PCL paper source",
+    "Factory Setting": "8 (model supporting driver priority mode) or 0 (other)",
+    "Format": "FRPO X9,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "X9",
+    "Values": [
+      {
+        "Options": {
+          "0": "Performs paper selection depending on media type.",
+          "1": "Performs paper selection depending on paper sources.",
+          "10": "Combination of value 2 and 8.",
+          "11": "Combination of value 1, 2 and 8.",
+          "2": "Performs paper selection which is compatible with HP-LJ8000.",
+          "3": "Combination of value 1 and 2.",
+          "8": "Performs paper selection in driver priority mode.",
+          "9": "Combination of value 1 and 8."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y0": {
+    "Environment": "Automatic continue for 'Press GO'",
+    "Factory Setting": 0,
+    "Format": "FRPO Y0,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y0",
+    "Values": [
+      {
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y1": {
+    "Environment": "Automatic continue timer",
+    "Factory Setting": 6,
+    "Format": "FRPO Y1,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y1",
+    "Values": [
+      {
+        "Comment": "number from 000 to 495 in increments of 5 seconds",
+        "Type": "range",
+        "max": 495,
+        "min": 0
+      }
+    ]
+  },
+  "Y2": {
+    "Environment": "Quick fuser heater",
+    "Factory Setting": "0 or 1",
+    "Format": "FRPO Y2,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y2",
+    "Values": [
+      {
+        "Options": {
+          "0": "On",
+          "1": "Off"
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y3": {
+    "Environment": "Error message for device error",
+    "Factory Setting": 0,
+    "Format": "FRPO Y3,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y3",
+    "Values": [
+      {
+        "Options": {
+          "0": "Does not display an error message and pause the job when the device error occurs.",
+          "1": "Displays an error message when duplex printing is not executed because ofa  possible limitation.",
+          "10": "Combination of value 2 and 8.",
+          "11": "Combination of value 1, 2 and 8.",
+          "12": "Combination of value 4 and 8.",
+          "13": "Combination of value 1, 4 and 8.",
+          "14": "Combination of value 2, 4 and 8.",
+          "15": "Combination of value 1, 2, 4 and 8.",
+          "16": "Displays an error message when stapling, puching, offset or rotate collate is not executed because of a possible limitation except 2, 4 and 8.",
+          "17": "Combination of value 1 and 16.",
+          "18": "Combination of value 2 and 16.",
+          "19": "Combination of value 1, 2 and 16.",
+          "2": "Displays an error message and pause the job when running out of staples.",
+          "20": "Combination of value 4 and 16.",
+          "21": "Combination of value 1, 4 and 16.",
+          "22": "Combination of value 2, 4 and 16.",
+          "23": "Combination of value 1, 2, 4 and 16.",
+          "24": "Combination of value 8 and 16.",
+          "25": "Combination of value 1, 8 and 16.",
+          "26": "Combination of value 2, 8 and 16.",
+          "27": "Combination of value 1, 2, 8 and 16.",
+          "28": "Combination of value 4, 8 and 16.",
+          "29": "Combination of value 1, 4, 8 and 16.",
+          "3": "Combination of value 1 and 2.",
+          "30": "Combination of value 2, 4, 8 and 16.",
+          "31": "Combination of value 1, 2, 4, 8 and 16.",
+          "4": "Displays an error message and pause the job when the waste punch box is full.",
+          "5": "Combination of value 1 and 4.",
+          "6": "Combination of value 2 and 4.",
+          "7": "Combination of value 1, 2 and 4.",
+          "8": "Displays an error message and pause the job when the maximum number of stapling is exceeded.",
+          "9": "Combination of value 1 and 8."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y4": {
+    "Environment": "Duplex operation for specified paper type (Prepunched, Preprinted and Letterhead)",
+    "Factory Setting": 0,
+    "Format": "FRPO Y4,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y4",
+    "Values": [
+      {
+        "Options": {
+          "0": "Leaves the job as is when the job which the specified paper type is specified in simplex mode.",
+          "1": "Adds blank pages and prints the job in duplex mode when the job which the specified paper type is specified in simplex mode."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y5": {
+    "Environment": "Default operation for PDF direct printing",
+    "Factory Setting": 0,
+    "Format": "FRPO Y5,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y5",
+    "Values": [
+      {
+        "Options": {
+          "0": "Enlarges or reduces the image to fit in the current paper size. Loads paper from the current paper cassette.",
+          "1": "Through the image. Loads paper which is the same size as the image.",
+          "10": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, Ledgeror Legal size paper depending on the image size.",
+          "2": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, A4 or A3 size paper depending on the image size.",
+          "3": "Through the image. Loads Letter, A4 or A3 size paper depending on the image size.",
+          "8": "Through the image. Loads paper from the current paper cassette.",
+          "9": "Through the image. Loads Letter, Ledger or Legal size paper depending on the image size."
+        },
+        "Type": "enum"
+      }
+    ]
+  },
+  "Y6": {
+    "Environment": "e-MPS error",
+    "Factory Setting": 3,
+    "Format": "FRPO Y6,#1;",
+    "Interface": "Interface Independent",
+    "Parameter": "Y6",
+    "Values": [
+      {
+        "Options": {
+          "0": "Does not print the error report and display the error message.",
+          "1": "Prints the error report.",
+          "2": "Displays the error message.",
+          "3": "Prints the error report and displays the error message."
+        },
+        "Type": "enum"
+      }
+    ]
+  }
+}

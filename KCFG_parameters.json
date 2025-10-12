@@ -1,0 +1,388 @@
+{
+  "ELOG": {
+    "Environment": "Event LOG",
+    "Parameter": "\"ELOG\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"ELOG\";",
+    "Values": [],
+    "Note": "Prints Event Log",
+    "Parent": "KCFG",
+    "Source": "FS4200 Service Manual"
+  },
+  "TCCM": {
+    "Environment": "Three Tier Color Monitoring",
+    "Parameter": "\"TCCM\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"TCCM\",#1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ],
+    "Note": "Must be turned on to configure STCT",
+    "Parent": "KCFG",
+    "Source": "General Tech Bulletin #97 (02/28/2014)"
+  },
+  "STCT": {
+    "Environment": "Set Tier Count",
+    "Parameter": "\"STCT\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"STCT\",#1,#2;",
+    "Multi-Paramater": 1,
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Level 1",
+          "2": "Level 2"
+        },
+        "Name": "Level",
+        "Position": 1,
+        "Comment": "Setting the threshold to reach a certain level"
+      },
+      {
+        "Type": "range",
+        "min": 1,
+        "max": 999,
+        "Name": "Coverage",
+        "Position": 2,
+        "Comment": "number from 1 to 999 in increments of .1%, so 100 is 10%"
+      }
+    ],
+    "Parent": "KCFG"
+  },
+  "SCAN": {
+    "Environment": "Changing the Scanner Adjustment",
+    "Parameter": "\"SCAN\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"SCAN\",#1,#2,#3;",
+    "Multi-Paramater": 1,
+    "Conditional": 1,
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "2": "U071 - Adjusting the DP scanning timing",
+          "3": "U072 - Adjusting the DP center line",
+          "4": "U070 - Adjusting the DP magnification",
+          "5": "U066 - Adjusting the scanner leading edge registration",
+          "6": "U067 - Adjusting the scanner center line",
+          "8": "U065 - Adjusting the scanner magnification",
+          "9": "U068 - Adjusting the scanning position for the original from the DP"
+        },
+        "Name": "Maintenance Mode",
+        "Position": 1,
+        "Comment": "Selecting a Maintenance Mode as target"
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Leading edge registration (first side)",
+          "2": "Trailing edge registration (first side)",
+          "3": "Leading edge registration (second side)",
+          "4": "Trailing edge registration (second side)",
+          "5": "With 180 degrees rotation"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 2
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Center line adjustment (DATA1)",
+          "2": "Center line adjustment (DATA2)",
+          "3": "Center line adjustment (DATA3)"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 3
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Magnification adjustment"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 4
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Leading edge registration (DATA1)",
+          "2": "Leading edge registration (DATA2)"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 5
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Scanner center line (DATA1)",
+          "2": "Scanner center line (DATA2)"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 6
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Scanner magnification (MAIN)",
+          "2": "Scanner magnification (SUB)"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 8
+      },
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Scanning position (DATA1)",
+          "2": "Scanning position (TEST POS)"
+        },
+        "Name": "Content Setting",
+        "Position": 2,
+        "Comment": "Selecting Maintenance Mode Content",
+        "Parent Position": 1,
+        "Parent Option": 9
+      },
+      {
+        "Type": "range",
+        "min": -32,
+        "max": 32,
+        "Position": 3,
+        "Grandparent Option": 2,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": -32,
+        "max": 32,
+        "Position": 3,
+        "Grandparent Option": 2,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -45,
+        "max": 45,
+        "Position": 3,
+        "Grandparent Option": 2,
+        "Parent Position": 2,
+        "Parent Option": 3
+      },
+      {
+        "Type": "range",
+        "min": -45,
+        "max": 45,
+        "Position": 3,
+        "Grandparent Option": 2,
+        "Parent Position": 2,
+        "Parent Option": 4
+      },
+      {
+        "Type": "range",
+        "min": -128,
+        "max": 127,
+        "Position": 3,
+        "Grandparent Option": 2,
+        "Parent Position": 2,
+        "Parent Option": 5
+      },
+      {
+        "Type": "range",
+        "min": -39,
+        "max": 39,
+        "Position": 3,
+        "Grandparent Option": 3,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": -39,
+        "max": 39,
+        "Position": 3,
+        "Grandparent Option": 3,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -39,
+        "max": 39,
+        "Position": 3,
+        "Grandparent Option": 3,
+        "Parent Position": 2,
+        "Parent Option": 3
+      },
+      {
+        "Type": "range",
+        "min": -25,
+        "max": 25,
+        "Position": 3,
+        "Grandparent Option": 4,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -45,
+        "max": 45,
+        "Position": 3,
+        "Grandparent Option": 5,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": -45,
+        "max": 45,
+        "Position": 3,
+        "Grandparent Option": 5,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -70,
+        "max": 70,
+        "Position": 3,
+        "Grandparent Option": 6,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": -40,
+        "max": 40,
+        "Position": 3,
+        "Grandparent Option": 6,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -32,
+        "max": 127,
+        "Position": 3,
+        "Grandparent Option": 8,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": -25,
+        "max": 25,
+        "Position": 3,
+        "Grandparent Option": 8,
+        "Parent Position": 2,
+        "Parent Option": 2
+      },
+      {
+        "Type": "range",
+        "min": -33,
+        "max": 33,
+        "Position": 3,
+        "Grandparent Option": 9,
+        "Parent Position": 2,
+        "Parent Option": 1
+      },
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 3,
+        "Position": 3,
+        "Grandparent Option": 9,
+        "Parent Position": 2,
+        "Parent Option": 2
+      }
+    ],
+    "Parent": "KCFG",
+    "Source": "A354-2KW-0017"
+  },
+  "PDFR": {
+    "Environment": "PDF Rotate",
+    "Parameter": "\"PDFR\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"PDFR\",#1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Rotate mode by rotate key (Default)",
+          "1": "Actual image rotate mode",
+          "2": "Rotate + CTM rotate mode"
+        }
+      }
+    ],
+    "Parent": "KCFG",
+    "Source": "B086-2KW-0025"
+  },
+  "WKUM": {
+    "Environment": "Wake Up",
+    "Parameter": "\"WKUM\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"WKUM\",#1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ],
+    "Note": "Must be turned on to configure STCT",
+    "Parent": "KCFG",
+    "Source": "D251-2LV-0025"
+  },
+  "WKUT": {
+    "Environment": "Wake Up",
+    "Parameter": "\"WKUT\"",
+    "Factory Setting": 0,
+    "Format": "KCFG\"WKUT\",#1,#2;",
+    "Multi-Paramater": 1,
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 23,
+        "Name": "Hours",
+        "Position": 1,
+        "Comment": "Startup time (hours)"
+      },
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 59,
+        "Name": "Minutes",
+        "Position": 2,
+        "Comment": "Startup time (minutes)"
+      }
+    ],
+    "Parent": "KCFG",
+    "Source": "D251-2LV-0025"
+  }
+}

@@ -264,7 +264,10 @@ def generate_tokens(command):
 
 def get_expected_tokens(command):
     parser = Parser()
-    #print(command)
+
+    if not command:
+        return []
+
     if command[0] == "FRPO":
         parent_commands = parser.frpo_params
         keyword = "FRPO"
@@ -303,15 +306,53 @@ def compare_tokens(expected, given):
 
 
 def parse_line(full_text):
-    lines = full_text.split("\n")
+    lines = list(filter(None, full_text.split("\n")))
     commands = []
+    opening_match = 0
+    closing_match = 0
     for line in lines:
+        if "!R!" in line:
+            opening_match += 1
+        elif "EXIT;" in line:
+            closing_match += 1
         temp = filter(None, line.replace(";", ";~~").split("~~"))
         for t in temp:
             if temp:
                 commands.append(t.strip())
 
     errors = []
+
+    if "!R!" in lines[0]:
+        _temp_msg = ""
+        if lines[0].startswith(" "):
+            _temp_msg += "Please remove leading whitespace\n"
+        if lines[0].endswith(" "):
+            _temp_msg += "Please remove trailing whitespace"
+        if _temp_msg:
+            errors.append(("!R!", _temp_msg))
+    else:
+        errors.append(("!R!", "!R! missing at beginning of file"))
+
+    if "EXIT;" in lines[-1]:
+        _temp_msg = ""
+        if lines[-1].startswith(" "):
+            _temp_msg += "Please remove leading whitespace\n"
+        if lines[-1].endswith(" "):
+            _temp_msg += "Please remove trailing whitespace"
+        if _temp_msg:
+            errors.append(("EXIT;", _temp_msg))
+    else:
+        errors.append(("EXIT;", "EXIT; missing at end of file"))
+        
+    if opening_match == 0:
+        errors.append(("!R!", "Missing opening command !R!"))
+    if closing_match == 0:
+        errors.append(("EXIT;", "Missing exit command EXIT;"))
+    if opening_match > 1 and opening_match > closing_match:
+        errors.append(("!R!", "Too many opening commands"))
+    if closing_match > 1 and closing_match > opening_match:
+        errors.append(("EXIT;", "Too many closing commands"))
+
     for command in commands:
         success, reason = parse_command(command)
         if not success:

@@ -1,13 +1,14 @@
 from parser import Parser, parse_line
 import customtkinter as ct
 from chlorophyll import CodeView
-import pygments.lexers
+import platform, subprocess
 from tkinter import INSERT, Tk
 from prescribe_lexer import PrescribeLexer, PrescribeStyle
-import re
+import re, os
 from ordered_set import OrderedSet
 from CTkMenuBar import *
-
+from tkinter import filedialog, StringVar
+from generator import generate_examples
 
 def get_keywords():
     custom_parser = Parser()
@@ -49,23 +50,34 @@ class custom_gui(ct.CTk):
 
         self.parser = Parser()
 
+        try:
+            self.directory_path = os.path.join(os.environ['USERPROFILE'], 'Kyocera_commands')
+        except KeyError:
+            self.directory_path = os.path.join(os.environ['HOME'], 'Kyocera_commands')
+
+        if not os.path.exists(self.directory_path):
+            os.makedirs(self.directory_path, exist_ok=True)
+
+        generate_examples(self.directory_path)
+
         self.last_space = "2.0"
         self.current_space = "2.0"
         self.separator_fg_color = "#1D1E1E"
 
         self.menubar = CTkMenuBar(self)
         self.file_button = self.menubar.add_cascade("File")
-        self.editor_button = self.menubar.add_cascade("Editor")
-        self.sender_button = self.menubar.add_cascade("Sender")
         self.format_button = self.menubar.add_cascade("Format")
         self.format_button.configure(command=self.format_prescribe_commands)
+        self.open_directory_button = self.menubar.add_cascade("Open Command Folder")
+        self.open_directory_button.configure(command=self.open_directory)
 
         self.file_dropdown = CustomDropdownMenu(widget=self.file_button)
-        self.file_dropdown.add_option(option="New File")
-        self.file_dropdown.add_option(option="Open File")
-        self.file_dropdown.add_option(option="Save")
+        self.file_dropdown.add_option(option="New File", command=self.new_file)
+        self.file_dropdown.add_option(option="Open File", command=self.open_file)
+        self.file_dropdown.add_option(option="Save", command=self.save_file)
+        self.file_dropdown.add_option(option="Save As", command=self.saveas_file)
         self.file_dropdown.add_separator()
-        self.file_dropdown.add_option(option="Exit")
+        self.file_dropdown.add_option(option="Exit", command=self.destroy)
 
         self.menubar.configure(fg_color="#1D1E1E", corner_radius=0, border_width=4, border_color="#1D1E1E")
 
@@ -122,10 +134,34 @@ class custom_gui(ct.CTk):
         self.codebox_separator.configure(height=4, fg_color=self.separator_fg_color)
         self.codebox_separator.pack(expand=False, fill="x")
 
-        self.sending_box_height = int(self.y * 0.50)
+        self.sending_box_height = int(self.y * 0.75)
         self.sending_box = ct.CTkFrame(self.codebox_frame, corner_radius=0, height=self.sending_box_height)
         self.sending_box.configure(fg_color="#282A36")
         self.sending_box.pack(expand=True, fill="both")
+        self.sending_box.grid_propagate(False)
+
+        self.ip_label = ct.CTkLabel(self.sending_box, corner_radius=0, text="IP(s):")
+        #self.ip_label.pack(side="top", anchor="nw", padx=(10,0), pady=(10,0))
+        self.ip_label.grid(row=0, column=0, sticky="nw", padx=(10,0), pady=(10,0))
+
+        self.ip_text_var = StringVar()
+        self.ip_text_var.trace_add("write", self.ip_entry_focus)
+        self.ip_entry = ct.CTkEntry(self.sending_box, textvariable=self.ip_text_var, corner_radius=0, width=int(self.x * 0.75 * 0.94))
+        #self.ip_entry.pack(side="top", anchor="nw", padx=(10,20), pady=(10,0), expand=True, fill="x")
+        self.ip_entry.grid(row=0, column=1, sticky="nw", padx=(10, 10), pady=(10, 0), columnspan=5)
+        self.ip_entry.bind("<FocusOut>", self.ip_entry_focus)
+
+        self.ip_note = ct.CTkLabel(self.sending_box, corner_radius=0,
+                                   text="(If entering multiple IPs, please use a semicolon ';' to separate them.)")
+        #self.ip_note.pack(side="left", anchor="nw", padx=(10,0), pady=(10,0))
+        self.ip_note.grid(row=1, column=0, sticky="nw", padx=(10, 0), pady=(0, 10), columnspan=5)
+
+        self.lpr_status_label = ct.CTkLabel(self.sending_box, corner_radius=0, text=f"LPR Status: {self.get_lpr_status()}")
+        self.lpr_status_label.grid(row=2, column=0, sticky="nw", padx=(10, 0), pady=(0, 10), columnspan=2)
+
+        self.send_file = ct.CTkButton(self.sending_box, corner_radius=2, text="Send")
+        self.send_file.grid(row=3, column=0, sticky="nw", padx=(10, 0), pady=(0, 10), columnspan=2)
+        self.send_file.configure(state="disabled")
 
         self.line = None
         self.last_token = None
@@ -140,12 +176,87 @@ class custom_gui(ct.CTk):
         self.prescribe_keys = self.parser.prescribe_params.keys()
         self.formatable = False
 
+        self.current_file = None
+
+    def open_directory(self):
+        os.startfile(self.directory_path)
+
+    def save_file(self):
+        if self.current_file:
+            with open(self.current_file, "w") as f:
+                f.write(self.codebox.get("0.0", "end").strip())
+        else:
+            self.saveas_file()
+
+    def open_file(self):
+        file_path = filedialog.askopenfilename(
+            initialdir=self.directory_path,
+            filetypes=[("Text Files", "*.txt"), ("All files", "*.*")]
+        )
+        if file_path:
+            self.current_file = file_path
+            with open(file_path, "r") as f:
+                text = f.read()
+
+            self.codebox.delete("0.0", "end")
+            self.codebox.insert("0.0", text.strip())
+            self.codebox.insert(INSERT, "\n")
+            self.codebox.delete(INSERT, "end")
+
+            self.formatable = True
+            self.format_prescribe_commands()
+
+            f_name = file_path.split('/')[-1]
+            self.title(f"Prescribe IDE (lite) -- {f_name}")
+
+    def new_file(self):
+        self.codebox.delete("0.0", "end")
+        self.codebox.insert("0.0", "!R!\n\nEXIT;\n")
+        self.codebox.delete("4.0", "end")
+
+        self.current_file = None
+        self.title("Prescribe IDE (lite)")
+
+    def saveas_file(self):
+        file_path = filedialog.asksaveasfilename(
+            defaultextension=".txt",
+            initialdir=self.directory_path,
+            filetypes=[("Text Files", "*.txt"), ("All files", "*.*")],
+        )
+        if file_path:
+            self.current_file = file_path
+            with open(self.current_file, "w") as f:
+                f.write(self.codebox.get("0.0", "end").strip())
+
+            f_name = file_path.split('/')[-1]
+            self.title(f"Prescribe IDE (lite) -- {f_name}")
+
+    def get_lpr_status(self):
+        system = platform.system().lower()
+
+        if system == "windows":
+            try:
+                subprocess.call(['where', 'lpr'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError:
+                return "Not Enabled - Please Enable LPR"
+        else:
+            try:
+                subprocess.call(['which', 'lpr'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError:
+                return "Not Enabled - Please Enable LPR"
+
+        return "Enabled"
+
     def optionmenu_callback(self, choice):
         print("optionmenu_callback: ", choice)
 
     def format_prescribe_commands(self):
         if self.formatable:
-            _new_tokens = list(filter(None, self.codebox.get("0.0", "end").replace(";", ";~~").split("\n")))
+            _preparsed = self.codebox.get("0.0", "end").replace(";", ";~~")
+            _preparsed = _preparsed.replace("!R!", "!R!~~")
+            _preparsed = _preparsed.replace("EXIT;", "~~EXIT;")
+
+            _new_tokens = list(filter(None, _preparsed.split("\n")))
             _check_command_count = list(
                 filter(None, [command.strip() for c in _new_tokens for command in c.split("~~")]))
             self.codebox.delete("0.0", "end")
@@ -160,18 +271,32 @@ class custom_gui(ct.CTk):
             self.formatable = False
             self.handle_error_msg()
 
+    def ip_entry_focus(self, event=None, *args):
+        ip_addresses = self.ip_entry.get().strip()
+        if ip_addresses:
+            self.send_file.configure(state="normal")
+        else:
+            self.send_file.configure(state="disabled")
+
     def handle_error_msg(self):
         errors = parse_line(self.codebox.get("0.0", "end"))
         if errors:
             error_msg = "\n"
             for indx, error in errors:
                 line_indx = self.codebox.search(indx, "0.0", stopindex="end")
+
+                if not line_indx:
+                    error_msg += "\nError at End of File\n"
+                    error_msg += f"{'':>{self.tab_width}}Command: {indx}\n"
+                    error_msg += f"{'':>{self.tab_width}}Error: {error}\n"
+                    continue
+
                 row = int(line_indx.split(".")[0])
                 col = int(line_indx.split(".")[1])
                 error_msg += f"\nError at Line {row} Char {col}\n"
                 error_msg += f"{'':>{self.tab_width}}Command: {indx}\n"
                 error_msg += f"{'':>{self.tab_width}}Error: {error}\n"
-            if error_msg:
+            if error_msg != "\n":
                 self.error_box.configure(state="normal")
                 self.error_box.delete("3.0", "end")
                 self.error_box.insert("3.0", error_msg)
@@ -182,16 +307,18 @@ class custom_gui(ct.CTk):
             self.error_box.configure(state="disabled")
 
     def key_handler(self, event):
+
         self.current_space = self.codebox.index(INSERT)
-        row, col = self.current_space.split(".")
+        row, _ = self.current_space.split(".")
 
         end_caps = OrderedSet(["!R!", "EXIT"])
         self.line = self.codebox.get("0.0", "end").split("\n")[int(row) - 1]
         delimiters = r',|;|"| '
         tokens = OrderedSet(filter(None, re.split(delimiters, self.line))) - end_caps
 
-        _new_tokens = list(filter(None, self.codebox.get("0.0", "end").replace(";", ";~~").split("\n")))
-        _check_command_count = list(filter(None, [command.strip() for c in _new_tokens for command in c.split("~~")]))
+        temp_tokens = self.codebox.get("0.0", "end").replace(";", ";~~").split("\n")
+        _new_tokens = list(filter(None, [command.rstrip() for command in temp_tokens]))
+        _check_command_count = list(filter(None, [command.rstrip() for c in _new_tokens for command in c.split("~~")]))
 
         if len(_new_tokens) != len(_check_command_count) and not self.formatable:
             self.error_box.configure(state="normal")

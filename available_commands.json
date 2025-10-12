@@ -1,0 +1,10 @@
+{
+	"FRPO": {
+    "Environment": "Firmware ReProGram",
+    "param_file": "FRPO_params.json"
+  },
+  "KCFG": {
+    "Environment": "Kyocera ConFiGuration",
+    "param_file": "KFCG_params.json"
+  }
+}
