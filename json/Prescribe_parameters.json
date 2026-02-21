@@ -1,0 +1,18 @@
+{
+  "STAT": {
+    "Environment": "Prints a Status Page",
+    "Factory Setting": 0,
+    "Format": "STAT #1;",
+    "Interface": "None",
+    "Parameter": "STAT",
+    "Values": [
+      {
+        "Options": {
+          "0": "Prints a User Status Page",
+          "1": "Prints a Service Status Page"
+        },
+        "Type": "Enum"
+      }
+    ]
+  }
+}

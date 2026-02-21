@@ -1,0 +1,620 @@
+{
+  "A1": {
+    "Environment": "Top Margin",
+    "Parameter": "A1",
+    "Factory Setting": 0,
+    "Format": "FRPO A1, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Integer value in inches"
+      }
+    ]
+  },
+  "A2": {
+    "Environment": "Top Margin",
+    "Parameter": "A2",
+    "Factory Setting": 0,
+    "Format": "FRPO A2, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Fraction value in 1/100 inches"
+      }
+    ]
+  },
+  "A3": {
+    "Environment": "Left Margin",
+    "Parameter": "A3",
+    "Factory Setting": 0,
+    "Format": "FRPO A3, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Integer value in inches"
+      }
+    ]
+  },
+  "A4": {
+    "Environment": "Left Margin",
+    "Parameter": "A4",
+    "Factory Setting": 0,
+    "Format": "FRPO A4, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Fraction value in 1/100 inches"
+      }
+    ]
+  },
+  "A5": {
+    "Environment": "Page Length",
+    "Parameter": "A5",
+    "Factory Setting": 13,
+    "Format": "FRPO A5, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Integer value in inches"
+      }
+    ]
+  },
+  "A6": {
+    "Environment": "Page Length",
+    "Parameter": "A6",
+    "Factory Setting": 61,
+    "Format": "FRPO A6, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Fraction value in 1/100 inches"
+      }
+    ]
+  },
+  "A7": {
+    "Environment": "Page Width",
+    "Parameter": "A7",
+    "Factory Setting": 13,
+    "Format": "FRPO A7, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Integer value in inches"
+      }
+    ]
+  },
+  "A8": {
+    "Environment": "Page Width",
+    "Parameter": "A8",
+    "Factory Setting": 61,
+    "Format": "FRPO A8, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Fraction value in 1/100 inches"
+      }
+    ]
+  },
+  "C1": {
+    "Environment": "Page Orientation",
+    "Parameter": "C1",
+    "Factory Setting": 0,
+    "Format": "FRPO C1, #1;",
+    "Values": [
+      {
+        "Type": "Enum",
+        "Options": {
+          "0": "Portrait",
+          "1": "Landscape"
+        }
+      }
+    ]
+  },
+  "C5": {
+    "Environment": "First two digits of power-up font",
+    "Parameter": "C5",
+    "Factory Setting": "00",
+    "Format": "FRPO C5, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "First two digits of power-up font"
+      }
+    ]
+  },
+  "C2": {
+    "Environment": "Middle two digits of power-up font",
+    "Parameter": "C2",
+    "Factory Setting": "00",
+    "Format": "FRPO C2, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Middle two digits of power-up font"
+      }
+    ]
+  },
+  "C3": {
+    "Environment": "Last two digits of power-up font",
+    "Parameter": "C3",
+    "Factory Setting": "00",
+    "Format": "FRPO C3, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Last two digits of power-up font"
+      }
+    ]
+  },
+  "C8": {
+    "Environment": "Last two digits of power-up font",
+    "Parameter": "C8",
+    "Factory Setting": 0,
+    "Format": "FRPO C8, #1;",
+    "Values": [
+      {
+        "Type": "Enum",
+        "Options": {
+          "0": "HP compatibility mode (Characters hgiher than 127 are not printed)",
+          "1": "Conventional mode (Characters higher than 127 are printed. Supported symbo sets: ISO-60, ISO-15, ISO-11, ISO-6, ISO-4, ISO-69, ISO-21, ISO-17, Symbol"
+        }
+      }
+    ]
+  },
+  "G0": {
+    "Environment": "Last two digits of power-up font",
+    "Parameter": "G0",
+    "Factory Setting": 0,
+    "Format": "FRPO G0, #1;",
+    "Values": [
+      {
+        "Type": "Enum",
+        "Options": {
+          "0": "Mode A; formfeed to SP0",
+          "1": "Mode B; formfeed to SP0",
+          "2": "Mode A; no formfeed to SP0",
+          "3": "Mode B; no formfeed to SP0",
+          "4": "Fixed mode A; formfeed",
+          "5": "Fixed mode B; formfeed",
+          "6": "Fixed mode A; no formfeed",
+          "7": "Fixed mode B; no formfeed",
+          "8": "Mode A; formfeed",
+          "9": "Mode B; formfeed",
+          "10": "Mode A; no formfeed",
+          "11": "Mode B; no formfeed",
+          "12": "Fixed mode A; formfeed",
+          "13": "Fixed mode B; formfeed",
+          "14": "Fixed mode A; no formfeed",
+          "15": "Fixed mode B; no formfeed"
+        }
+      }
+    ]
+  },
+  "G1": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G1",
+    "Factory Setting": "01",
+    "Format": "FRPO G1, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G2": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G2",
+    "Factory Setting": "02",
+    "Format": "FRPO G2, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G3": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G3",
+    "Factory Setting": "03",
+    "Format": "FRPO G3, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G4": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G4",
+    "Factory Setting": "04",
+    "Format": "FRPO G4, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G5": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G5",
+    "Factory Setting": "05",
+    "Format": "FRPO G5, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G6": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G6",
+    "Factory Setting": "06",
+    "Format": "FRPO G6, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G7": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G7",
+    "Factory Setting": "07",
+    "Format": "FRPO G7, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "G8": {
+    "Environment": "KC-GL pen width",
+    "Parameter": "G8",
+    "Factory Setting": "08",
+    "Format": "FRPO G8, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "dot"
+      }
+    ]
+  },
+  "J9": {
+    "Environment": "KC-GL enlarge mode",
+    "Parameter": "J9",
+    "Factory Setting": 0,
+    "Format": "FRPO J9, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "A2",
+          "2": "A1",
+          "3": "A0",
+          "4": "B3",
+          "5": "B2",
+          "6": "B1",
+          "7": "B0"
+        }
+      }
+    ]
+  },
+  "N4": {
+    "Environment": "Duplex mode",
+    "Parameter": "N4",
+    "Factory Setting": 0,
+    "Format": "FRPO N4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Simplex mode",
+          "1": "Long-edge binding",
+          "2": "Short-edge binding"
+        }
+      }
+    ]
+  },
+  "P1": {
+    "Environment": "Default emulation mode",
+    "Parameter": "P1",
+    "Factory Setting": 6,
+    "Format": "FRPO P1, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Line Printer",
+          "1": "IBM Proprinter X24E",
+          "2": "Diablo 630",
+          "5": "Epson LQ-850",
+          "6": "HP LaserJet",
+          "8": "KC-GL",
+          "9": "KPDL"
+        }
+      }
+    ]
+  },
+  "P2": {
+    "Environment": "Carriage-return action",
+    "Parameter": "P2",
+    "Factory Setting": 1,
+    "Format": "FRPO P2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Ignores 0x0d",
+          "1": "Carriage-return",
+          "2": "Carriage-return+linefeed"
+        }
+      }
+    ]
+  },
+  "P3": {
+    "Environment": "Carriage-return action",
+    "Parameter": "P3",
+    "Factory Setting": 1,
+    "Format": "FRPO P3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Ignores 0x0d",
+          "1": "Linefeed",
+          "2": "Linefeed+carriage-return"
+        }
+      }
+    ]
+  },
+  "P4": {
+    "Environment": "Automatic emulation sensing",
+    "Parameter": "P4",
+    "Factory Setting": 0,
+    "Format": "FRPO P4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "AES disabled",
+          "1": "AES enabled"
+        }
+      }
+    ]
+  },
+  "P5": {
+    "Environment": "Alternative emulation",
+    "Parameter": "P5",
+    "Factory Setting": 6,
+    "Format": "FRPO P5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Line Printer",
+          "1": "IBM Proprinter X24E",
+          "2": "Diablo 630",
+          "5": "Epson LQ-850",
+          "6": "HP LaserJet",
+          "8": "KC-GL"
+        }
+      }
+    ]
+  },
+  "P7": {
+    "Environment": "Automatic emulation switching trigger",
+    "Parameter": "P7",
+    "Factory Setting": 10,
+    "Format": "FRPO P7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Page eject commands",
+          "1": "None",
+          "2": "Page eject and Prescribe EXIT",
+          "4": "Prescibe EXIT",
+          "5": "Formfeed (^L)",
+          "6": "Page eject, Prescibe EXIT and formfeed",
+          "7": "Prescribe EXIT and formfeed",
+          "8": "Page eject commands; if AES fails, resolves to alterantive emulation (P5)",
+          "9": "None; if AES fails, resolves to alterantive emulation",
+          "10": "Page eject commands; if AES fails, resolves to KPDL"
+        }
+      }
+    ]
+  },
+  "S3": {
+    "Environment": "Sorter overfilling behavior",
+    "Parameter": "S3",
+    "Factory Setting": 0,
+    "Format": "FRPO S3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Interrupts printing until trays are emptied",
+          "1": "Bypasses printing to the face-down tray"
+        }
+      }
+    ]
+  },
+  "U0": {
+    "Environment": "Line spacing",
+    "Parameter": "U0",
+    "Factory Setting": 6,
+    "Format": "FRPO U0, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Lines per inch (integer value)"
+      }
+    ]
+  },
+  "U1": {
+    "Environment": "Line spacing",
+    "Parameter": "U1",
+    "Factory Setting": 0,
+    "Format": "FRPO U1, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Lines per inch (fraction value)"
+      }
+    ]
+  },
+  "U2": {
+    "Environment": "Character spacing",
+    "Parameter": "U2",
+    "Factory Setting": 10,
+    "Format": "FRPO U2, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Lines per inch (integer value)"
+      }
+    ]
+  },
+  "U3": {
+    "Environment": "Character spacing",
+    "Parameter": "U3",
+    "Factory Setting": 0,
+    "Format": "FRPO U3, #1;",
+    "Values": [
+      {
+        "Type": "Integer",
+        "Comment": "Lines per inch (fraction value)"
+      }
+    ]
+  },
+  "U6": {
+    "Environment": "Country Code",
+    "Parameter": "U6",
+    "Factory Setting": 0,
+    "Format": "FRPO U6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "US-ASCII",
+          "1": "France",
+          "2": "Germany",
+          "3": "UK",
+          "4": "Denmark",
+          "5": "Sweden",
+          "6": "Italy",
+          "7": "Spain",
+          "8": "Japan",
+          "9": "US Legal",
+          "10": "IBM PC-850 (Multilingual)",
+          "11": "IBM PC-860 (Portuguese)",
+          "12": "IBM PC-863 (Canadian French)",
+          "13": "IBM PC-865 (Norwegian)",
+          "14": "Normway",
+          "15": "Denmark 2",
+          "16": "Spain 2",
+          "17": "Latin America"
+        }
+      },
+      {
+        "Type": "range",
+        "min": 50,
+        "max": 99,
+        "Comment": "HP PCL symbol set coding (see 7-37)"
+      }
+    ]
+  },
+  "U8": {
+    "Environment": "Font pitch for fixed-pitch scalable fonts",
+    "Parameter": "U8",
+    "Factory Setting": 10,
+    "Format": "FRPO U8, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 99,
+        "Comment": "Integer value in cpi: 0-99"
+      }
+    ]
+  },
+  "U9": {
+    "Environment": "Font pitch for fixed-pitch scalable fonts",
+    "Parameter": "U9",
+    "Factory Setting": 0,
+    "Format": "FRPO U9, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 99,
+        "Comment": "Fraction value in 1/100 cpi: 0-99"
+      }
+    ]
+  },
+  "V0": {
+    "Environment": "Font height for the default scalable font",
+    "Parameter": "V0",
+    "Factory Setting": 0,
+    "Format": "FRPO V0, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 9,
+        "Comment": "Integer value in 100 points: 0-9"
+      }
+    ]
+  },
+  "V1": {
+    "Environment": "Font height for the default scalable font",
+    "Parameter": "V1",
+    "Factory Setting": 12,
+    "Format": "FRPO V1, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 99,
+        "Comment": "Integer value in points: 0-99"
+      }
+    ]
+  },
+  "V2": {
+    "Environment": "Font height for the default scalable font",
+    "Parameter": "V2",
+    "Factory Setting": 0,
+    "Format": "FRPO V2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "25": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "50": "Fraction value in 1/100 points: 0, 25, 50, 75",
+          "75": "Fraction value in 1/100 points: 0, 25, 50, 75"
+        }
+      }
+    ]
+  },
+  "V3": {
+    "Environment": "Default scalable font",
+    "Parameter": "V3",
+    "Factory Setting": "-",
+    "Format": "FRPO V3, #1;",
+    "Values": [
+      {
+        "Type": "String",
+        "Comment": "Name of typeface of up to 32 characters, enclosed with single or double quotation marks"
+      }
+    ]
+  }
+}

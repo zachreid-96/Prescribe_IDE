@@ -1,0 +1,1280 @@
+{
+  "B0": {
+    "Environment": "Downloadable PCL font compression",
+    "Parameter": "B0",
+    "Factory Setting": "0 (countries excluding Asia) or 1 (Asia)",
+    "Format": "FRPO B0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ]
+  },
+  "B7": {
+    "Environment": "Message language selection at power-on",
+    "Parameter": "B7",
+    "Factory Setting": 1,
+    "Format": "FRPO B7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Automatically enters message language selection menu at the intital power-on. After a language is selected, B7=1 is set automatically.",
+          "1": "Does not automatically enter message language selection menu at power-on."
+        }
+      }
+    ]
+  },
+  "B8": {
+    "Environment": "Default patter resolution (PAT, FPAT, GPAT)",
+    "Parameter": "B8",
+    "Factory Setting": 0,
+    "Format": "FRPO B8, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "300 dpi",
+          "1": "600 dpi",
+          "2": "1200 dpi"
+        }
+      }
+    ]
+  },
+  "C0": {
+    "Environment": "Message language selection at power-on",
+    "Parameter": "C0",
+    "Factory Setting": 1,
+    "Format": "FRPO C0, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 999,
+        "Comment": "Number of copies to print: 1-999"
+      }
+    ]
+  },
+  "D0": {
+    "Environment": "Serial line control",
+    "Parameter": "D0",
+    "Factory Setting": 0,
+    "Format": "FRPO D0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is ignored.",
+          "1": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is valid.",
+          "2": "XON is not sent. Error is ignored.",
+          "3": "XON is not sent. Error is valid."
+        }
+      }
+    ]
+  },
+  "D4": {
+    "Environment": "Print density",
+    "Parameter": "D4",
+    "Factory Setting": 3,
+    "Format": "FRPO D4, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 1,
+        "max": 5,
+        "Comment": "Number from 1 (Light) to 5 (Dark)"
+      }
+    ]
+  },
+  "D5": {
+    "Environment": "Service status page",
+    "Parameter": "D5",
+    "Factory Setting": 1,
+    "Format": "FRPO D5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Not printed",
+          "1": "Printed"
+        }
+      }
+    ]
+  },
+  "D6": {
+    "Environment": "Paper jam retry timing",
+    "Parameter": "D6",
+    "Factory Setting": 0,
+    "Format": "FRPO D6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "End of page",
+          "1": "Fuser sensor activated",
+          "2": "Fuser sensor deactivated",
+          "3": "Page ejection",
+          "4": "Same as 0; non-engine-dependent"
+        }
+      }
+    ]
+  },
+  "H1": {
+    "Environment": "Serial interface baud rate",
+    "Parameter": "H1",
+    "Factory Setting": 96,
+    "Format": "FRPO H1, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "3": "300 bps (not valid for some models)",
+          "6": "600 bps (not valid for some models)",
+          "12": "1200 bps",
+          "24": "2400 bps",
+          "48": "4800 bps",
+          "96": "9600 bps",
+          "19": "19200 bps",
+          "38": "38400 bps",
+          "57": "57600 bps",
+          "11": "115200 bps"
+        }
+      }
+    ]
+  },
+  "H2": {
+    "Environment": "Serial interface data bits",
+    "Parameter": "H2",
+    "Factory Setting": 8,
+    "Format": "FRPO H2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "7": "7 or 8",
+          "8": "7 or 8"
+        }
+      }
+    ]
+  },
+  "H3": {
+    "Environment": "Serial interface stop bits",
+    "Parameter": "H3",
+    "Factory Setting": 1,
+    "Format": "FRPO H3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "1 or 2",
+          "1": "1 or 2"
+        }
+      }
+    ]
+  },
+  "H4": {
+    "Environment": "Serial interface parity",
+    "Parameter": "H4",
+    "Factory Setting": 0,
+    "Format": "FRPO H4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "None",
+          "1": "Odd",
+          "2": "Even",
+          "3": "Ignore"
+        }
+      }
+    ]
+  },
+  "H5": {
+    "Environment": "Serial interface protocol",
+    "Parameter": "H5",
+    "Factory Setting": 0,
+    "Format": "FRPO H5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Combination of 1 and 3 below",
+          "1": "DTR, positive true",
+          "2": "DTR, negative true",
+          "3": "XON/XOFF",
+          "4": "ETX/ACK",
+          "5": "XON/XOFF recognized only as protocol"
+        }
+      }
+    ]
+  },
+  "H8": {
+    "Environment": "Total host buffer size",
+    "Parameter": "H8",
+    "Factory Setting": "5 (monochrome model), 10 (monochrome model with network Interface), or 12 (color model)",
+    "Format": "FRPO H8, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 1,
+        "max": 99,
+        "Comment": "0 to 99 in units of the size defined by FRPO S5"
+      }
+    ]
+  },
+  "H9": {
+    "Environment": "Form feed time-out value",
+    "Parameter": "H9",
+    "Factory Setting": 6,
+    "Format": "FRPO H9, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 99,
+        "Comment": "Value in unites of 5 seconds (0 to 99)."
+      }
+    ]
+  },
+  "I5": {
+    "Environment": "Sleep timer",
+    "Parameter": "I5",
+    "Factory Setting": 1,
+    "Format": "FRPO I5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ]
+  },
+  "J0": {
+    "Environment": "Reduce/enlarge ration (Models supporting A3 size only)",
+    "Parameter": "J0",
+    "Factory Setting": 0,
+    "Format": "FRPO J0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "100%",
+          "5": "70%",
+          "6": "81%",
+          "7": "86%",
+          "8": "94%",
+          "9": "98%"
+        }
+      }
+    ]
+  },
+  "N0": {
+    "Environment": "KIR mode",
+    "Parameter": "N0",
+    "Factory Setting": 2,
+    "Format": "FRPO N0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "2": "On"
+        }
+      }
+    ]
+  },
+  "N4": {
+    "Environment": "Duplex binding",
+    "Parameter": "N4",
+    "Factory Setting": 0,
+    "Format": "FRPO N4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "Long edge",
+          "2": "Short edge"
+        }
+      }
+    ]
+  },
+  "N5": {
+    "Environment": "Sleep timer time-out time",
+    "Parameter": "N5",
+    "Factory Setting": 6,
+    "Format": "FRPO N5, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 1,
+        "max": 48,
+        "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]"
+      }
+    ]
+  },
+  "N6": {
+    "Environment": "Ecoprint level",
+    "Parameter": "N6",
+    "Factory Setting": 0,
+    "Format": "FRPO N6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "2": "On"
+        }
+      }
+    ]
+  },
+  "N7": {
+    "Environment": "Duplex",
+    "Parameter": "N7",
+    "Factory Setting": 0,
+    "Format": "FRPO N7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Normal",
+          "1": "Reverse output pages",
+          "2": "Allow duplex from the MP tray",
+          "3": "Allow duplex from the MP tray; reversing the output pages"
+        }
+      }
+    ]
+  },
+  "N8": {
+    "Environment": "Printing resolution",
+    "Parameter": "N8",
+    "Factory Setting": 1,
+    "Format": "FRPO N8, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "300 dpi",
+          "1": "600 dpi",
+          "3": "1200 dpi"
+        }
+      }
+    ]
+  },
+  "O0": {
+    "Environment": "Printing resolution",
+    "Parameter": "O0",
+    "Factory Setting": 5,
+    "Format": "FRPO O0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Normal",
+          "1": "High-speed",
+          "5": "Nibble (high)",
+          "70": "Auto (Negotiation)"
+        }
+      }
+    ]
+  },
+  "P9": {
+    "Environment": "Command recognition character",
+    "Parameter": "P9",
+    "Factory Setting": 6,
+    "Format": "FRPO P9, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 1,
+        "max": 48,
+        "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]"
+      }
+    ]
+  },
+  "R0": {
+    "Environment": "Default stacker",
+    "Parameter": "R0",
+    "Factory Setting": 1,
+    "Format": "FRPO R0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Face-down tray",
+          "2": "Face-up tray",
+          "3": "Bulk tray"
+        }
+      }
+    ]
+  },
+  "R2": {
+    "Environment": "Default paper size",
+    "Parameter": "R2",
+    "Factory Setting": 0,
+    "Format": "FRPO R2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Size of the default paper cassette (See R4)",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "3": "International DL (11 x 22 cm)",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4"
+        }
+      }
+    ]
+  },
+  "R3": {
+    "Environment": "Default margin settings",
+    "Parameter": "R3",
+    "Factory Setting": 0,
+    "Format": "FRPO R3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "HP compatible margins",
+          "1": "Full PCL printable area",
+          "2": "Character pitch given by U2 and U3",
+          "3": "Full PCL printable area with character pitches given by U2 and U3",
+          "10": "IBM HT reference point as the left margin",
+          "11": "Full PCL printable area for HP emulation; HT refernce point as the left margin in IBM emulation",
+          "12": "Uses Courier font for IBM emulation, using the pitch given by U2 and U3"
+        }
+      }
+    ]
+  },
+  "R4": {
+    "Environment": "Default cassette",
+    "Parameter": "R4",
+    "Factory Setting": 1,
+    "Format": "FRPO R4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Multi-purpose tray",
+          "1": "Cassette 1",
+          "2": "Cassette 2",
+          "3": "Cassette 3",
+          "4": "Cassette 4",
+          "5": "Cassette 5",
+          "6": "Cassette 6",
+          "7": "Cassette 7",
+          "99": "Envelope/universal feeder (FS-9000)"
+        }
+      }
+    ]
+  },
+  "R7": {
+    "Environment": "MP tray paper size",
+    "Parameter": "R7",
+    "Factory Setting": 0,
+    "Format": "FRPO R7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Maximum paper size of the printing system",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "3": "International DL (11 x 22 cm)",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4"
+        }
+      }
+    ]
+  },
+  "R8": {
+    "Environment": "Daisywheel data length",
+    "Parameter": "R8",
+    "Factory Setting": 7,
+    "Format": "FRPO R8, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "7": "7-bit",
+          "8": "8-bit"
+        }
+      }
+    ]
+  },
+  "R9": {
+    "Environment": "Default envelope feeder paper size",
+    "Parameter": "R9",
+    "Factory Setting": 0,
+    "Format": "FRPO R9, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "A4 or Letter",
+          "1": "Monarch (3-7/8 x 7-1/2 inches)",
+          "2": "Business (4-1/8 x 9-1/2 inches)",
+          "3": "International DL (11 x 22 cm)",
+          "4": "International C5 (16.2 x 22.9 cm)",
+          "5": "Executive (7-1/4 x 10-1/2 inches)",
+          "6": "US Letter (8-1/2 x 11 inches)",
+          "7": "US Legal (8-1/2 x 14 inches)",
+          "8": "A4 (21.0 x 29.7 cm)",
+          "9": "JIS B5 (18.2 x 25.7 cm)",
+          "10": "A3 (29.7 x 42 cm)",
+          "11": "B4 (25.7 x 36.4 cm)",
+          "12": "US Ledger (11 x 17 inches)",
+          "13": "A5 (14.8 x 21 cm)",
+          "14": "A6 (10.5 x 14.8 cm)",
+          "15": "JIS B6( 12.8 x 18.2 cm)",
+          "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+          "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+          "18": "ISOB5 (17.6 x 25 cm)",
+          "19": "Custom (11.7 x 17.7 inches)",
+          "20": "B4 to A4",
+          "21": "A3 to A4",
+          "22": "A4 to A4 [98%]",
+          "23": "STK to A4",
+          "24": "STK to B4",
+          "30": "C4 (22.9 x 32.4 cm)",
+          "31": "Hagaki (10 x 14.8 cm)",
+          "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+          "33": "Officio II",
+          "34": "Special 1",
+          "35": "Special 2",
+          "36": "A3 Wide",
+          "37": "Ledger Wide",
+          "38": "12 x 18",
+          "39": "8K",
+          "40": "16K",
+          "42": "216 x 340",
+          "43": "13 x 19",
+          "44": "SRA3",
+          "45": "KAKUGATA2",
+          "46": "NAGAGATA3",
+          "47": "YOUNAGA3",
+          "48": "NAGAGATA4",
+          "49": "13 x 19.2",
+          "50": "Statement",
+          "51": "Folio",
+          "52": "Youkei 2",
+          "53": "Youkei 4"
+        }
+      }
+    ]
+  },
+  "S4": {
+    "Environment": "A4/Letter equation",
+    "Parameter": "S4",
+    "Factory Setting": 0,
+    "Format": "FRPO S4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ]
+  },
+  "S5": {
+    "Environment": "Host buffer size",
+    "Parameter": "S5",
+    "Factory Setting": 1,
+    "Format": "FRPO S5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "10kB (x H8)",
+          "1": "100kB (x H8)",
+          "2": "1024kB (x H8)"
+        }
+      }
+    ]
+  },
+  "S6": {
+    "Environment": "RAM disk capacity",
+    "Parameter": "S6",
+    "Factory Setting": 50,
+    "Format": "FRPO S6, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 1024,
+        "Comment": "Integer value of MB"
+      }
+    ]
+  },
+  "S7": {
+    "Environment": "Host buffer size",
+    "Parameter": "S7",
+    "Factory Setting": 0,
+    "Format": "FRPO S7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Disabled",
+          "1": "Enabled"
+        }
+      }
+    ]
+  },
+  "T1": {
+    "Environment": "Cassette 1 paper size",
+    "Parameter": "T1",
+    "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+    "Format": "FRPO T1, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "4": "C5",
+          "5": "Executive",
+          "6": "Letter",
+          "7": "Legal",
+          "8": "A4",
+          "9": "B5",
+          "13": "A5",
+          "14": "A6",
+          "18": "INT B5",
+          "19": "CUSTOM",
+          "33": "Oficio II",
+          "40": "16K",
+          "50": "Statement",
+          "51": "Folio"
+        }
+      }
+    ]
+  },
+  "T2": {
+    "Environment": "Cassette 2 paper size",
+    "Parameter": "T2",
+    "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+    "Format": "FRPO T2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "4": "C5",
+          "5": "Executive",
+          "6": "Letter",
+          "7": "Legal",
+          "8": "A4",
+          "9": "B5",
+          "13": "A5",
+          "14": "A6",
+          "18": "INT B5",
+          "19": "CUSTOM",
+          "33": "Oficio II",
+          "40": "16K",
+          "51": "Folio"
+        }
+      }
+    ]
+  },
+  "T6": {
+    "Environment": "Wide A4",
+    "Parameter": "T6",
+    "Factory Setting": 0,
+    "Format": "FRPO T6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ]
+  },
+  "T8": {
+    "Environment": "MP tray direction",
+    "Parameter": "T8",
+    "Factory Setting": 1,
+    "Format": "FRPO T8, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Short edge",
+          "1": "Long edge"
+        }
+      }
+    ]
+  },
+  "V9": {
+    "Environment": "Default Courier weight",
+    "Parameter": "V9",
+    "Factory Setting": 0,
+    "Format": "FRPO V9, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Dark",
+          "1": "Normal"
+        }
+      }
+    ]
+  },
+  "W1": {
+    "Environment": "Color mode",
+    "Parameter": "W1",
+    "Factory Setting": 1,
+    "Format": "FRPO W1, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Monochrome (grayscale)",
+          "1": "Color (CMYK)",
+          "2": "Quick color (CMY)"
+        }
+      }
+    ]
+  },
+  "W6": {
+    "Environment": "Gloss mode",
+    "Parameter": "W6",
+    "Factory Setting": 0,
+    "Format": "FRPO W6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Low (normal)",
+          "1": "High"
+        }
+      }
+    ]
+  },
+  "X0": {
+    "Environment": "Paper type for the MP tray",
+    "Parameter": "X0",
+    "Factory Setting": 1,
+    "Format": "FRPO X0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "2": "Transparency",
+          "3": "Preprinted",
+          "4": "Label",
+          "5": "Bond",
+          "6": "Recycle",
+          "7": "Vellum",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "12": "Envelope",
+          "13": "Cardstock",
+          "14": "Coated Sheet",
+          "15": "Backing Sheet",
+          "16": "Thick Sheet",
+          "17": "High-quality Sheet",
+          "18": "Index Tabs",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X1": {
+    "Environment": "Paper type for paper cassette 1",
+    "Parameter": "X1",
+    "Factory Setting": 1,
+    "Format": "FRPO X1, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X2": {
+    "Environment": "Paper type for paper cassette 2",
+    "Parameter": "X2",
+    "Factory Setting": 1,
+    "Format": "FRPO X2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X3": {
+    "Environment": "Paper type for paper cassette 3",
+    "Parameter": "X3",
+    "Factory Setting": 1,
+    "Format": "FRPO X3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X4": {
+    "Environment": "Paper type for paper cassette 4",
+    "Parameter": "X4",
+    "Factory Setting": 1,
+    "Format": "FRPO X4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X5": {
+    "Environment": "Paper type for paper cassette 5",
+    "Parameter": "X5",
+    "Factory Setting": 1,
+    "Format": "FRPO X5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X6": {
+    "Environment": "Paper type for paper cassette 6",
+    "Parameter": "X6",
+    "Factory Setting": 1,
+    "Format": "FRPO X6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "17": "High-quality Sheet",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8",
+          "29": "Inkjet Paper",
+          "30": "Inkjet Matte Paper",
+          "31": "Thin Paper"
+        }
+      }
+    ]
+  },
+  "X7": {
+    "Environment": "Paper type for Envelope Feeder/Universal Feeder",
+    "Parameter": "X7",
+    "Factory Setting": 1,
+    "Format": "FRPO X7, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "1": "Plain",
+          "3": "Preprinted",
+          "4": "Label",
+          "5": "Bond",
+          "6": "Recycle",
+          "8": "Rough",
+          "9": "Letterhead",
+          "10": "Color",
+          "11": "Prepunched",
+          "12": "Envelope",
+          "13": "Cardstock",
+          "21": "Custom 1",
+          "22": "Custom 2",
+          "23": "Custom 3",
+          "24": "Custom 4",
+          "25": "Custom 5",
+          "26": "Custom 6",
+          "27": "Custom 7",
+          "28": "Custom 8"
+        }
+      }
+    ]
+  },
+  "X9": {
+    "Environment": "PCL paper source",
+    "Parameter": "X9",
+    "Factory Setting": "8 (model supporting driver priority mode) or 0 (other)",
+    "Format": "FRPO X9, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Performs paper selection depending on media type.",
+          "1": "Performs paper selection depending on paper sources.",
+          "2": "Performs paper selection which is compatible with HP-LJ8000.",
+          "3": "Combination of value 1 and 2.",
+          "8": "Performs paper selection in driver priority mode.",
+          "9": "Combination of value 1 and 8.",
+          "10": "Combination of value 2 and 8.",
+          "11": "Combination of value 1, 2 and 8."
+        }
+      }
+    ]
+  },
+  "Y0": {
+    "Environment": "Automatic continue for 'Press GO'",
+    "Parameter": "Y0",
+    "Factory Setting": 0,
+    "Format": "FRPO Y0, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Off",
+          "1": "On"
+        }
+      }
+    ]
+  },
+  "Y1": {
+    "Environment": "Automatic continue timer",
+    "Parameter": "Y1",
+    "Factory Setting": 6,
+    "Format": "FRPO Y1, #1;",
+    "Values": [
+      {
+        "Type": "range",
+        "min": 0,
+        "max": 495,
+        "Comment": "number from 000 to 495 in increments of 5 seconds"
+      }
+    ]
+  },
+  "Y2": {
+    "Environment": "Quick fuser heater",
+    "Parameter": "Y2",
+    "Factory Setting": "0 or 1",
+    "Format": "FRPO Y2, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "On",
+          "1": "Off"
+        }
+      }
+    ]
+  },
+  "Y3": {
+    "Environment": "Error message for device error",
+    "Parameter": "Y3",
+    "Factory Setting": 0,
+    "Format": "FRPO Y3, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Does not display an error message and pause the job when the device error occurs.",
+          "1": "Displays an error message when duplex printing is not executed because ofa  possible limitation.",
+          "2": "Displays an error message and pause the job when running out of staples.",
+          "3": "Combination of value 1 and 2.",
+          "4": "Displays an error message and pause the job when the waste punch box is full.",
+          "5": "Combination of value 1 and 4.",
+          "6": "Combination of value 2 and 4.",
+          "7": "Combination of value 1, 2 and 4.",
+          "8": "Displays an error message and pause the job when the maximum number of stapling is exceeded.",
+          "9": "Combination of value 1 and 8.",
+          "10": "Combination of value 2 and 8.",
+          "11": "Combination of value 1, 2 and 8.",
+          "12": "Combination of value 4 and 8.",
+          "13": "Combination of value 1, 4 and 8.",
+          "14": "Combination of value 2, 4 and 8.",
+          "15": "Combination of value 1, 2, 4 and 8.",
+          "16": "Displays an error message when stapling, puching, offset or rotate collate is not executed because of a possible limitation except 2, 4 and 8.",
+          "17": "Combination of value 1 and 16.",
+          "18": "Combination of value 2 and 16.",
+          "19": "Combination of value 1, 2 and 16.",
+          "20": "Combination of value 4 and 16.",
+          "21": "Combination of value 1, 4 and 16.",
+          "22": "Combination of value 2, 4 and 16.",
+          "23": "Combination of value 1, 2, 4 and 16.",
+          "24": "Combination of value 8 and 16.",
+          "25": "Combination of value 1, 8 and 16.",
+          "26": "Combination of value 2, 8 and 16.",
+          "27": "Combination of value 1, 2, 8 and 16.",
+          "28": "Combination of value 4, 8 and 16.",
+          "29": "Combination of value 1, 4, 8 and 16.",
+          "30": "Combination of value 2, 4, 8 and 16.",
+          "31": "Combination of value 1, 2, 4, 8 and 16."
+        }
+      }
+    ]
+  },
+  "Y4": {
+    "Environment": "Duplex operation for specified paper type (Prepunched, Preprinted and Letterhead)",
+    "Parameter": "Y4",
+    "Factory Setting": 0,
+    "Format": "FRPO Y4, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Leaves the job as is when the job which the specified paper type is specified in simplex mode.",
+          "1": "Adds blank pages and prints the job in duplex mode when the job which the specified paper type is specified in simplex mode."
+        }
+      }
+    ]
+  },
+  "Y5": {
+    "Environment": "Default operation for PDF direct printing",
+    "Parameter": "Y5",
+    "Factory Setting": 0,
+    "Format": "FRPO Y5, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Enlarges or reduces the image to fit in the current paper size. Loads paper from the current paper cassette.",
+          "1": "Through the image. Loads paper which is the same size as the image.",
+          "2": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, A4 or A3 size paper depending on the image size.",
+          "3": "Through the image. Loads Letter, A4 or A3 size paper depending on the image size.",
+          "8": "Through the image. Loads paper from the current paper cassette.",
+          "9": "Through the image. Loads Letter, Ledger or Legal size paper depending on the image size.",
+          "10": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, Ledgeror Legal size paper depending on the image size."
+        }
+      }
+    ]
+  },
+  "Y6": {
+    "Environment": "e-MPS error",
+    "Parameter": "Y6",
+    "Factory Setting": 3,
+    "Format": "FRPO Y6, #1;",
+    "Values": [
+      {
+        "Type": "enum",
+        "Options": {
+          "0": "Does not print the error report and display the error message.",
+          "1": "Prints the error report.",
+          "2": "Displays the error message.",
+          "3": "Prints the error report and displays the error message."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+customtkinter~=5.2.2
+Pygments~=2.19.2
+chlorophyll~=0.4.2
+pyparsing~=3.2.5
+ordered-set~=4.1.0
+CTkMenuBar~=0.9
+CTkMessagebox~=2.7
+faiss-cpu~=1.13.0
+sentence-transformers~=5.1.2
+llama-cpp-python~=0.3.16

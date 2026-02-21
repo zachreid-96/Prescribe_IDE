@@ -1,0 +1,3326 @@
+{
+  "ELOG": {
+    "Prescribe Command": "ELOG",
+    "Text Description": "Name: Event LOG\nFormat: KCFG\"ELOG\";\nParameter: \"ELOG\"\nThis parameter does not take any arguments. But it does Prints Event Log\n",
+    "Original Entry": {
+      "Environment": "Event LOG",
+      "Parameter": "\"ELOG\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"ELOG\";",
+      "Values": [],
+      "Note": "Prints Event Log",
+      "Parent": "KCFG",
+      "Source": "FS4200 Service Manual"
+    },
+    "Format": "KCFG\"ELOG\";"
+  },
+  "TCCM": {
+    "Prescribe Command": "TCCM",
+    "Text Description": "Name: Three Tier Color Monitoring\nFormat: KCFG\"TCCM\",#1;\nParameter: \"TCCM\"\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Three Tier Color Monitoring",
+      "Parameter": "\"TCCM\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"TCCM\",#1;",
+      "Values": [
+        {
+          "Type": "Enum",
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Comment": "On/Off Configuration"
+        }
+      ],
+      "Note": "Must be turned on to configure STCT",
+      "Parent": "KCFG",
+      "Source": "General Tech Bulletin #97 (02/28/2014)"
+    },
+    "Format": "KCFG\"TCCM\",#1;"
+  },
+  "STCT": {
+    "Prescribe Command": "STCT",
+    "Text Description": "Name: Sets Levels for Three Tier Color Monitoring\nFormat: KCFG\"STCT\",#1,#2;\nParameter: \"STCT\"\nThe command accepts the following arguments in Position #1: \n1 = Level 1\n2 = Level 2\nThe command accepts the following arguments in Position #2: \nMin Value = 1 and Max value = 999\n",
+    "Original Entry": {
+      "Environment": "Sets Levels for Three Tier Color Monitoring",
+      "Parameter": "\"STCT\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"STCT\",#1,#2;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Level 1",
+            "2": "Level 2"
+          },
+          "Name": "Level",
+          "Position": 1,
+          "Comment": "Setting the threshold to reach a certain level"
+        },
+        {
+          "Type": "Range",
+          "min": 1,
+          "max": 999,
+          "Name": "Coverage",
+          "Position": 2,
+          "Comment": "number from 1 to 999 in increments of .1%, so 100 is 10%"
+        }
+      ],
+      "Parent": "KCFG"
+    },
+    "Format": "KCFG\"STCT\",#1,#2;"
+  },
+  "SCAN": {
+    "Prescribe Command": "SCAN",
+    "Text Description": "Name: Changing the Scanner Adjustment\nFormat: KCFG\"SCAN\",#1,#2,#3;\nParameter: \"SCAN\"\nThe command accepts the following arguments in Position #1: \n2 = U071 - Adjusting the DP scanning timing\n3 = U072 - Adjusting the DP center line\n4 = U070 - Adjusting the DP magnification\n5 = U066 - Adjusting the scanner leading edge registration\n6 = U067 - Adjusting the scanner center line\n8 = U065 - Adjusting the scanner magnification\n9 = U068 - Adjusting the scanning position for the original from the DP\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 2\n1 = Leading edge registration (first side)\n2 = Trailing edge registration (first side)\n3 = Leading edge registration (second side)\n4 = Trailing edge registration (second side)\n5 = With 180 degrees rotation\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 3\n1 = Center line adjustment (DATA1)\n2 = Center line adjustment (DATA2)\n3 = Center line adjustment (DATA3)\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 4\n1 = Magnification adjustment\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 5\n1 = Leading edge registration (DATA1)\n2 = Leading edge registration (DATA2)\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 6\n1 = Scanner center line (DATA1)\n2 = Scanner center line (DATA2)\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 8\n1 = Scanner magnification (MAIN)\n2 = Scanner magnification (SUB)\nThe command accepts the following arguments in Position #2 WITH Parent Position #1 AND Parent Option = 9\n1 = Scanning position (DATA1)\n2 = Scanning position (TEST POS)\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 2\nMin Value = -32 and Max value = 32\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 2\nMin Value = -32 and Max value = 32\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 3 AND Grandparent Option = 2\nMin Value = -45 and Max value = 45\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 4 AND Grandparent Option = 2\nMin Value = -45 and Max value = 45\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 5 AND Grandparent Option = 2\nMin Value = -128 and Max value = 127\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 3\nMin Value = -39 and Max value = 39\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 3\nMin Value = -39 and Max value = 39\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 3 AND Grandparent Option = 3\nMin Value = -39 and Max value = 39\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 4\nMin Value = -25 and Max value = 25\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 5\nMin Value = -45 and Max value = 45\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 5\nMin Value = -45 and Max value = 45\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 6\nMin Value = -70 and Max value = 70\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 6\nMin Value = -40 and Max value = 40\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 8\nMin Value = -32 and Max value = 127\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 8\nMin Value = -25 and Max value = 25\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 1 AND Grandparent Option = 9\nMin Value = -33 and Max value = 33\nThe command accepts the following arguments in Position #3 WITH Parent Position #2 AND Parent Option = 2 AND Grandparent Option = 9\nMin Value = 0 and Max value = 3\n",
+    "Original Entry": {
+      "Environment": "Changing the Scanner Adjustment",
+      "Parameter": "\"SCAN\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"SCAN\",#1,#2,#3;",
+      "Multi-Parameter": 1,
+      "Conditional": 1,
+      "Values": [
+        {
+          "Type": "Enum",
+          "Options": {
+            "2": "U071 - Adjusting the DP scanning timing",
+            "3": "U072 - Adjusting the DP center line",
+            "4": "U070 - Adjusting the DP magnification",
+            "5": "U066 - Adjusting the scanner leading edge registration",
+            "6": "U067 - Adjusting the scanner center line",
+            "8": "U065 - Adjusting the scanner magnification",
+            "9": "U068 - Adjusting the scanning position for the original from the DP"
+          },
+          "Name": "Maintenance Mode",
+          "Position": 1,
+          "Comment": "Selecting a Maintenance Mode as target"
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Leading edge registration (first side)",
+            "2": "Trailing edge registration (first side)",
+            "3": "Leading edge registration (second side)",
+            "4": "Trailing edge registration (second side)",
+            "5": "With 180 degrees rotation"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 2
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Center line adjustment (DATA1)",
+            "2": "Center line adjustment (DATA2)",
+            "3": "Center line adjustment (DATA3)"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 3
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Magnification adjustment"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 4
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Leading edge registration (DATA1)",
+            "2": "Leading edge registration (DATA2)"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 5
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Scanner center line (DATA1)",
+            "2": "Scanner center line (DATA2)"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 6
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Scanner magnification (MAIN)",
+            "2": "Scanner magnification (SUB)"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 8
+        },
+        {
+          "Type": "Enum",
+          "Options": {
+            "1": "Scanning position (DATA1)",
+            "2": "Scanning position (TEST POS)"
+          },
+          "Name": "Content Setting",
+          "Position": 2,
+          "Comment": "Selecting Maintenance Mode Content",
+          "Parent Position": 1,
+          "Parent Option": 9
+        },
+        {
+          "Type": "Range",
+          "min": -32,
+          "max": 32,
+          "Position": 3,
+          "Grandparent Option": 2,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -32,
+          "max": 32,
+          "Position": 3,
+          "Grandparent Option": 2,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -45,
+          "max": 45,
+          "Position": 3,
+          "Grandparent Option": 2,
+          "Parent Position": 2,
+          "Parent Option": 3,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -45,
+          "max": 45,
+          "Position": 3,
+          "Grandparent Option": 2,
+          "Parent Position": 2,
+          "Parent Option": 4,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -128,
+          "max": 127,
+          "Position": 3,
+          "Grandparent Option": 2,
+          "Parent Position": 2,
+          "Parent Option": 5,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -39,
+          "max": 39,
+          "Position": 3,
+          "Grandparent Option": 3,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -39,
+          "max": 39,
+          "Position": 3,
+          "Grandparent Option": 3,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -39,
+          "max": 39,
+          "Position": 3,
+          "Grandparent Option": 3,
+          "Parent Position": 2,
+          "Parent Option": 3,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -25,
+          "max": 25,
+          "Position": 3,
+          "Grandparent Option": 4,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -45,
+          "max": 45,
+          "Position": 3,
+          "Grandparent Option": 5,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -45,
+          "max": 45,
+          "Position": 3,
+          "Grandparent Option": 5,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -70,
+          "max": 70,
+          "Position": 3,
+          "Grandparent Option": 6,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -40,
+          "max": 40,
+          "Position": 3,
+          "Grandparent Option": 6,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -32,
+          "max": 127,
+          "Position": 3,
+          "Grandparent Option": 8,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -25,
+          "max": 25,
+          "Position": 3,
+          "Grandparent Option": 8,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": -33,
+          "max": 33,
+          "Position": 3,
+          "Grandparent Option": 9,
+          "Parent Position": 2,
+          "Parent Option": 1,
+          "Comment": "Value"
+        },
+        {
+          "Type": "Range",
+          "min": 0,
+          "max": 3,
+          "Position": 3,
+          "Grandparent Option": 9,
+          "Parent Position": 2,
+          "Parent Option": 2,
+          "Comment": "Value"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "A354-2KW-0017"
+    },
+    "Format": "KCFG\"SCAN\",#1,#2,#3;"
+  },
+  "PDFR": {
+    "Prescribe Command": "PDFR",
+    "Text Description": "Name: PDF Rotate\nFormat: KCFG\"PDFR\",#1;\nParameter: \"PDFR\"\nThe command accepts the following arguments in Position #1: \n0 = Rotate mode by rotate key (Default)\n1 = Actual image rotate mode\n2 = Rotate + CTM rotate mode\n",
+    "Original Entry": {
+      "Environment": "PDF Rotate",
+      "Parameter": "\"PDFR\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"PDFR\",#1;",
+      "Values": [
+        {
+          "Type": "Enum",
+          "Options": {
+            "0": "Rotate mode by rotate key (Default)",
+            "1": "Actual image rotate mode",
+            "2": "Rotate + CTM rotate mode"
+          },
+          "Comment": "Rotation Mode"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "B086-2KW-0025"
+    },
+    "Format": "KCFG\"PDFR\",#1;"
+  },
+  "WKUM": {
+    "Prescribe Command": "WKUM",
+    "Text Description": "Name: Wake Up\nFormat: KCFG\"WKUM\",#1;\nParameter: \"WKUM\"\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Wake Up",
+      "Parameter": "\"WKUM\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"WKUM\",#1;",
+      "Values": [
+        {
+          "Type": "Enum",
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Comment": "On/Off Configuration"
+        }
+      ],
+      "Note": "Must be turned on to configure STCT",
+      "Parent": "KCFG",
+      "Source": "D251-2LV-0025"
+    },
+    "Format": "KCFG\"WKUM\",#1;"
+  },
+  "WKUT": {
+    "Prescribe Command": "WKUT",
+    "Text Description": "Name: Wake Up\nFormat: KCFG\"WKUT\",#1,#2;\nParameter: \"WKUT\"\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 23\nThe command accepts the following arguments in Position #2: \nMin Value = 0 and Max value = 59\n",
+    "Original Entry": {
+      "Environment": "Wake Up",
+      "Parameter": "\"WKUT\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"WKUT\",#1,#2;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Type": "Range",
+          "min": 0,
+          "max": 23,
+          "Name": "Hours",
+          "Position": 1,
+          "Comment": "Startup time (hours)"
+        },
+        {
+          "Type": "Range",
+          "min": 0,
+          "max": 59,
+          "Name": "Minutes",
+          "Position": 2,
+          "Comment": "Startup time (minutes)"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "D251-2LV-0025"
+    },
+    "Format": "KCFG\"WKUT\",#1,#2;"
+  },
+  "LFRE": {
+    "Prescribe Command": "LFRE",
+    "Text Description": "Name: Reset Life Counter\nFormat: KCFG\"WKUT\",#1,#2;\nParameter: \"LFRE\"\nThe command accepts the following arguments in Position #1: \nDRUM = Drum\nDEVK = Developer\nFUSR = Fuser\nThe command accepts the following arguments in Position #2: \nMin Value = 0 and Max value = 100\n",
+    "Original Entry": {
+      "Environment": "Reset Life Counter",
+      "Parameter": "\"LFRE\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"WKUT\",#1,#2;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Options": {
+            "DRUM": "Drum",
+            "DEVK": "Developer",
+            "FUSR": "Fuser"
+          },
+          "Type": "Enum",
+          "Name": "Part",
+          "Position": 1,
+          "Comment": "Part"
+        },
+        {
+          "Type": "Range",
+          "min": 0,
+          "max": 100,
+          "Name": "Part Percentage",
+          "Position": 2,
+          "Comment": "Part Percentage"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "copytech.net via GROK",
+      "Note": "UNTESTED AND UNVERIFIED | INCOMPLETE"
+    },
+    "Format": "KCFG\"WKUT\",#1,#2;"
+  },
+  "KSMS": {
+    "Prescribe Command": "KSMS",
+    "Text Description": "Name: Service Mode / Service Management Toggle\nFormat: KCFG\"KSMS\",#1,#2,#3,#4;\nParameter: \"KSMS\"\nThe command accepts the following arguments in Position #1: \n2 = Service Mode Selector\nThe command accepts the following arguments in Position #2: \n1127 = Maintenance Mode\nThe command accepts the following arguments in Position #3: \n0 = Unknown flag\nThe command accepts the following arguments in Position #4: \n0000000000000000 = OFF\n0100000000000000 = ON\n",
+    "Original Entry": {
+      "Environment": "Service Mode / Service Management Toggle",
+      "Parameter": "\"KSMS\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"KSMS\",#1,#2,#3,#4;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Options": {
+            "2": "Service Mode Selector"
+          },
+          "Type": "Enum",
+          "Name": "Service Mode Selector",
+          "Position": 1,
+          "Comment": "Service Mode Selector"
+        },
+        {
+          "Options": {
+            "1127": "Maintenance Mode"
+          },
+          "Type": "Enum",
+          "Name": "Maintenance Mode in Decimal representation of Hex",
+          "Position": 2,
+          "Comment": "Maintenance Mode in Decimal representation of Hex"
+        },
+        {
+          "Options": {
+            "0": "Unknown flag"
+          },
+          "Type": "Enum",
+          "Name": "Unknown flag",
+          "Position": 3,
+          "Comment": "Unknown flag"
+        },
+        {
+          "Options": {
+            "0000000000000000": "OFF",
+            "0100000000000000": "ON"
+          },
+          "Type": "Enum",
+          "Name": "Turn ON/OFF MM",
+          "Position": 4,
+          "Comment": "On/Off Configuration"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "copytech.net via GROK",
+      "Note": "UNTESTED AND UNVERIFIED | INCOMPLETE"
+    },
+    "Format": "KCFG\"KSMS\",#1,#2,#3,#4;"
+  },
+  "PFRC": {
+    "Prescribe Command": "PFRC",
+    "Text Description": "Name: Print Front Registration Correction\nFormat: KCFG\"PRFRC\",#1,#2,#3;\nParameter: \"PFRC\"\nThe command accepts the following arguments in Position #1: \n0 = MP Tray\n1 = Tray 1\n2 = Tray 2\n3 = Tray 3\n4 = Tray 4\n5 = Tray 5\n100 = Duplex\nThe command accepts the following arguments in Position #2: \n1 = Leading Edge\n2 = Left Edge\nThe command accepts the following arguments in Position #3: \nMin Value = -128 and Max value = 127\n",
+    "Original Entry": {
+      "Environment": "Print Front Registration Correction",
+      "Parameter": "\"PFRC\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"PRFRC\",#1,#2,#3;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Options": {
+            "0": "MP Tray",
+            "1": "Tray 1",
+            "2": "Tray 2",
+            "3": "Tray 3",
+            "4": "Tray 4",
+            "5": "Tray 5",
+            "100": "Duplex"
+          },
+          "Type": "Enum",
+          "Name": "Tray Selection",
+          "Position": 1,
+          "Comment": "Tray Selection"
+        },
+        {
+          "Options": {
+            "1": "Leading Edge",
+            "2": "Left Edge"
+          },
+          "Type": "Enum",
+          "Name": "Adjustment Type",
+          "Position": 2,
+          "Comment": "Adjustment Type"
+        },
+        {
+          "Comment": "Adjustment Value at 600dpi",
+          "Name": "Adjustment Value",
+          "Type": "Range",
+          "max": 127,
+          "min": -128,
+          "Position": 3,
+          "Default": 0
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "copytech.net via GROK",
+      "Note": "UNTESTED AND UNVERIFIED | INCOMPLETE"
+    },
+    "Format": "KCFG\"PRFRC\",#1,#2,#3;"
+  },
+  "MTMD": {
+    "Prescribe Command": "MTMD",
+    "Text Description": "Name: Modifies machine settings to enable/disable virtual features\nFormat: KCFG\"MTMD\",#1,#2;\nParameter: \"MTMD\"\nThe command accepts the following arguments in Position #1: \n3910000 = MP Tray\nThe command accepts the following arguments in Position #2: \n0 = Disable\n1 = Enable\n",
+    "Original Entry": {
+      "Environment": "Modifies machine settings to enable/disable virtual features",
+      "Parameter": "\"MTMD\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"MTMD\",#1,#2;",
+      "Multi-Parameter": 1,
+      "Values": [
+        {
+          "Options": {
+            "3910000": "MP Tray"
+          },
+          "Type": "Enum",
+          "Name": "Feature Code",
+          "Position": 1,
+          "Comment": "Feature Code"
+        },
+        {
+          "Options": {
+            "0": "Disable",
+            "1": "Enable"
+          },
+          "Type": "Enum",
+          "Name": "Enable/Disable Feature",
+          "Position": 2,
+          "Comment": "Enable/Disable Feature"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "copytech.net via GROK",
+      "Note": "UNTESTED AND UNVERIFIED | INCOMPLETE"
+    },
+    "Format": "KCFG\"MTMD\",#1,#2;"
+  },
+  "ADM0": {
+    "Prescribe Command": "ADM0",
+    "Text Description": "Name: Admin Password Reset\nFormat: KCFG\"ADM0\",#1;\nParameter: \"ADM0\"\nThe command accepts the following arguments in Position #1: \n0 = Reset\n",
+    "Original Entry": {
+      "Environment": "Admin Password Reset",
+      "Parameter": "\"ADM0\"",
+      "Factory Setting": 0,
+      "Format": "KCFG\"ADM0\",#1;",
+      "Multi-Parameter": 0,
+      "Values": [
+        {
+          "Options": {
+            "0": "Reset"
+          },
+          "Type": "Enum",
+          "Name": "Reset Trigger",
+          "Position": 1,
+          "Comment": "Reset Trigger"
+        }
+      ],
+      "Parent": "KCFG",
+      "Source": "copytech.net via GROK",
+      "Note": "UNTESTED AND UNVERIFIED | INCOMPLETE"
+    },
+    "Format": "KCFG\"ADM0\",#1;"
+  },
+  "A1": {
+    "Prescribe Command": "A1",
+    "Text Description": "Name: Top Margin\nFormat: FRPO A1,#1;\nParameter: A1\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Integer value in inches\n",
+    "Original Entry": {
+      "Environment": "Top Margin",
+      "Factory Setting": 0,
+      "Format": "FRPO A1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A1",
+      "Values": [
+        {
+          "Comment": "Integer value in inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A1,#1;"
+  },
+  "A2": {
+    "Prescribe Command": "A2",
+    "Text Description": "Name: Top Margin\nFormat: FRPO A2,#1;\nParameter: A2\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Fraction value in 1/100 inches\n",
+    "Original Entry": {
+      "Environment": "Top Margin",
+      "Factory Setting": 0,
+      "Format": "FRPO A2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A2",
+      "Values": [
+        {
+          "Comment": "Fraction value in 1/100 inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A2,#1;"
+  },
+  "A3": {
+    "Prescribe Command": "A3",
+    "Text Description": "Name: Left Margin\nFormat: FRPO A3,#1;\nParameter: A3\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Integer value in inches\n",
+    "Original Entry": {
+      "Environment": "Left Margin",
+      "Factory Setting": 0,
+      "Format": "FRPO A3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A3",
+      "Values": [
+        {
+          "Comment": "Integer value in inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A3,#1;"
+  },
+  "A4": {
+    "Prescribe Command": "A4",
+    "Text Description": "Name: Left Margin\nFormat: FRPO A4,#1;\nParameter: A4\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Fraction value in 1/100 inches\n",
+    "Original Entry": {
+      "Environment": "Left Margin",
+      "Factory Setting": 0,
+      "Format": "FRPO A4,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A4",
+      "Values": [
+        {
+          "Comment": "Fraction value in 1/100 inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A4,#1;"
+  },
+  "A5": {
+    "Prescribe Command": "A5",
+    "Text Description": "Name: Page Length\nFormat: FRPO A5,#1;\nParameter: A5\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Integer value in inches\n",
+    "Original Entry": {
+      "Environment": "Page Length",
+      "Factory Setting": 13,
+      "Format": "FRPO A5,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A5",
+      "Values": [
+        {
+          "Comment": "Integer value in inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A5,#1;"
+  },
+  "A6": {
+    "Prescribe Command": "A6",
+    "Text Description": "Name: Page Length\nFormat: FRPO A6,#1;\nParameter: A6\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Fraction value in 1/100 inches\n",
+    "Original Entry": {
+      "Environment": "Page Length",
+      "Factory Setting": 61,
+      "Format": "FRPO A6,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A6",
+      "Values": [
+        {
+          "Comment": "Fraction value in 1/100 inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A6,#1;"
+  },
+  "A7": {
+    "Prescribe Command": "A7",
+    "Text Description": "Name: Page Width\nFormat: FRPO A7,#1;\nParameter: A7\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Integer value in inches\n",
+    "Original Entry": {
+      "Environment": "Page Width",
+      "Factory Setting": 13,
+      "Format": "FRPO A7,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A7",
+      "Values": [
+        {
+          "Comment": "Integer value in inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A7,#1;"
+  },
+  "A8": {
+    "Prescribe Command": "A8",
+    "Text Description": "Name: Page Width\nFormat: FRPO A8,#1;\nParameter: A8\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Fraction value in 1/100 inches\n",
+    "Original Entry": {
+      "Environment": "Page Width",
+      "Factory Setting": 61,
+      "Format": "FRPO A8,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "A8",
+      "Values": [
+        {
+          "Comment": "Fraction value in 1/100 inches",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO A8,#1;"
+  },
+  "B0": {
+    "Prescribe Command": "B0",
+    "Text Description": "Name: Downloadable PCL font compression\nFormat: FRPO B0,#1;\nParameter: B0\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Downloadable PCL font compression",
+      "Factory Setting": "0 (countries excluding Asia) or 1 (Asia)",
+      "Format": "FRPO B0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "B0",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO B0,#1;"
+  },
+  "B7": {
+    "Prescribe Command": "B7",
+    "Text Description": "Name: Message language selection at power-on\nFormat: FRPO B7,#1;\nParameter: B7\nThe command accepts the following arguments in Position #1: \n0 = Automatically enters message language selection menu at the intital power-on. After a language is selected, B7=1 is set automatically.\n1 = Does not automatically enter message language selection menu at power-on.\n",
+    "Original Entry": {
+      "Environment": "Message language selection at power-on",
+      "Factory Setting": 1,
+      "Format": "FRPO B7,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "B7",
+      "Values": [
+        {
+          "Options": {
+            "0": "Automatically enters message language selection menu at the intital power-on. After a language is selected, B7=1 is set automatically.",
+            "1": "Does not automatically enter message language selection menu at power-on."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Language Selection State"
+        }
+      ]
+    },
+    "Format": "FRPO B7,#1;"
+  },
+  "B8": {
+    "Prescribe Command": "B8",
+    "Text Description": "Name: Default patter resolution (PAT, FPAT, GPAT)\nFormat: FRPO B8,#1;\nParameter: B8\nThe command accepts the following arguments in Position #1: \n0 = 300 dpi\n1 = 600 dpi\n2 = 1200 dpi\n",
+    "Original Entry": {
+      "Environment": "Default patter resolution (PAT, FPAT, GPAT)",
+      "Factory Setting": 0,
+      "Format": "FRPO B8,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "B8",
+      "Values": [
+        {
+          "Options": {
+            "0": "300 dpi",
+            "1": "600 dpi",
+            "2": "1200 dpi"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "DPI setting"
+        }
+      ]
+    },
+    "Format": "FRPO B8,#1;"
+  },
+  "C0": {
+    "Prescribe Command": "C0",
+    "Text Description": "Name: Copy Count\nFormat: FRPO C0,#1;\nParameter: C0\nThe command accepts the following arguments in Position #1: \nMin Value = 1 and Max value = 999\n",
+    "Original Entry": {
+      "Environment": "Copy Count",
+      "Factory Setting": 1,
+      "Format": "FRPO C0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "C0",
+      "Values": [
+        {
+          "Comment": "Number of copies to print: 1-999",
+          "Position": 1,
+          "Type": "Range",
+          "max": 999,
+          "min": 1
+        }
+      ]
+    },
+    "Format": "FRPO C0,#1;"
+  },
+  "C1": {
+    "Prescribe Command": "C1",
+    "Text Description": "Name: Page Orientation\nFormat: FRPO C1,#1;\nParameter: C1\nThe command accepts the following arguments in Position #1: \n0 = Portrait\n1 = Landscape\n",
+    "Original Entry": {
+      "Environment": "Page Orientation",
+      "Factory Setting": 0,
+      "Format": "FRPO C1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "C1",
+      "Values": [
+        {
+          "Options": {
+            "0": "Portrait",
+            "1": "Landscape"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Page Orientation"
+        }
+      ]
+    },
+    "Format": "FRPO C1,#1;"
+  },
+  "C2": {
+    "Prescribe Command": "C2",
+    "Text Description": "Name: Middle two digits of power-up font\nFormat: FRPO C2,#1;\nParameter: C2\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Middle two digits of power-up font\n",
+    "Original Entry": {
+      "Environment": "Middle two digits of power-up font",
+      "Factory Setting": "00",
+      "Format": "FRPO C2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "C2",
+      "Values": [
+        {
+          "Comment": "Middle two digits of power-up font",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO C2,#1;"
+  },
+  "C3": {
+    "Prescribe Command": "C3",
+    "Text Description": "Name: Last two digits of power-up font\nFormat: FRPO C3,#1;\nParameter: C3\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Last two digits of power-up font\n",
+    "Original Entry": {
+      "Environment": "Last two digits of power-up font",
+      "Factory Setting": "00",
+      "Format": "FRPO C3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "C3",
+      "Values": [
+        {
+          "Comment": "Last two digits of power-up font",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO C3,#1;"
+  },
+  "C5": {
+    "Prescribe Command": "C5",
+    "Text Description": "Name: First two digits of power-up font\nFormat: FRPO C5,#1;\nParameter: C5\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing First two digits of power-up font\n",
+    "Original Entry": {
+      "Environment": "First two digits of power-up font",
+      "Factory Setting": "00",
+      "Format": "FRPO C5,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "C5",
+      "Values": [
+        {
+          "Comment": "First two digits of power-up font",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO C5,#1;"
+  },
+  "C8": {
+    "Prescribe Command": "C8",
+    "Text Description": "Name: Last two digits of power-up font\nFormat: FRPO C8,#1;\nParameter: C8\nThe command accepts the following arguments in Position #1: \n0 = HP compatibility mode (Characters hgiher than 127 are not printed)\n1 = Conventional mode (Characters higher than 127 are printed. Supported symbo sets: ISO-60, ISO-15, ISO-11, ISO-6, ISO-4, ISO-69, ISO-21, ISO-17, Symbol\n",
+    "Original Entry": {
+      "Environment": "Last two digits of power-up font",
+      "Factory Setting": 0,
+      "Format": "FRPO C8,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "C8",
+      "Values": [
+        {
+          "Options": {
+            "0": "HP compatibility mode (Characters hgiher than 127 are not printed)",
+            "1": "Conventional mode (Characters higher than 127 are printed. Supported symbo sets: ISO-60, ISO-15, ISO-11, ISO-6, ISO-4, ISO-69, ISO-21, ISO-17, Symbol"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Character Mode"
+        }
+      ]
+    },
+    "Format": "FRPO C8,#1;"
+  },
+  "D0": {
+    "Prescribe Command": "D0",
+    "Text Description": "Name: Serial line control\nFormat: FRPO D0,#1;\nParameter: D0\nThe command accepts the following arguments in Position #1: \n0 = XON is sent every 5 seconds during the printing system is ready or waiting. Error is ignored.\n1 = XON is sent every 5 seconds during the printing system is ready or waiting. Error is valid.\n2 = XON is not sent. Error is ignored.\n3 = XON is not sent. Error is valid.\n",
+    "Original Entry": {
+      "Environment": "Serial line control",
+      "Factory Setting": 0,
+      "Format": "FRPO D0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "D0",
+      "Values": [
+        {
+          "Options": {
+            "0": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is ignored.",
+            "1": "XON is sent every 5 seconds during the printing system is ready or waiting. Error is valid.",
+            "2": "XON is not sent. Error is ignored.",
+            "3": "XON is not sent. Error is valid."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "XON State"
+        }
+      ]
+    },
+    "Format": "FRPO D0,#1;"
+  },
+  "D4": {
+    "Prescribe Command": "D4",
+    "Text Description": "Name: Print density\nFormat: FRPO D4,#1;\nParameter: D4\nThe command accepts the following arguments in Position #1: \nMin Value = 1 and Max value = 5\n",
+    "Original Entry": {
+      "Environment": "Print density",
+      "Factory Setting": 3,
+      "Format": "FRPO D4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "D4",
+      "Values": [
+        {
+          "Comment": "Number from 1 (Light) to 5 (Dark)",
+          "Position": 1,
+          "Type": "Range",
+          "max": 5,
+          "min": 1
+        }
+      ]
+    },
+    "Format": "FRPO D4,#1;"
+  },
+  "D5": {
+    "Prescribe Command": "D5",
+    "Text Description": "Name: Service status page\nFormat: FRPO D5,#1;\nParameter: D5\nThe command accepts the following arguments in Position #1: \n0 = Not printed\n1 = Printed\n",
+    "Original Entry": {
+      "Environment": "Service status page",
+      "Factory Setting": 1,
+      "Format": "FRPO D5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "D5",
+      "Values": [
+        {
+          "Options": {
+            "0": "Not printed",
+            "1": "Printed"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Printing of Service Status Page"
+        }
+      ]
+    },
+    "Format": "FRPO D5,#1;"
+  },
+  "D6": {
+    "Prescribe Command": "D6",
+    "Text Description": "Name: Paper jam retry timing\nFormat: FRPO D6,#1;\nParameter: D6\nThe command accepts the following arguments in Position #1: \n0 = End of page\n1 = Fuser sensor activated\n2 = Fuser sensor deactivated\n3 = Page ejection\n4 = Same as 0; non-engine-dependent\n",
+    "Original Entry": {
+      "Environment": "Paper jam retry timing",
+      "Factory Setting": 0,
+      "Format": "FRPO D6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "D6",
+      "Values": [
+        {
+          "Options": {
+            "0": "End of page",
+            "1": "Fuser sensor activated",
+            "2": "Fuser sensor deactivated",
+            "3": "Page ejection",
+            "4": "Same as 0; non-engine-dependent"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Jam Retry Timing"
+        }
+      ]
+    },
+    "Format": "FRPO D6,#1;"
+  },
+  "G0": {
+    "Prescribe Command": "G0",
+    "Text Description": "Name: KC-GL options\nFormat: FRPO G0,#1;\nParameter: G0\nThe command accepts the following arguments in Position #1: \n0 = Mode A; formfeed to SP0\n1 = Mode B; formfeed to SP0\n10 = Mode A; no formfeed\n11 = Mode B; no formfeed\n12 = Fixed mode A; formfeed\n13 = Fixed mode B; formfeed\n14 = Fixed mode A; no formfeed\n15 = Fixed mode B; no formfeed\n2 = Mode A; no formfeed to SP0\n3 = Mode B; no formfeed to SP0\n4 = Fixed mode A; formfeed\n5 = Fixed mode B; formfeed\n6 = Fixed mode A; no formfeed\n7 = Fixed mode B; no formfeed\n8 = Mode A; formfeed\n9 = Mode B; formfeed\n",
+    "Original Entry": {
+      "Environment": "KC-GL options",
+      "Factory Setting": 0,
+      "Format": "FRPO G0,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G0",
+      "Values": [
+        {
+          "Options": {
+            "0": "Mode A; formfeed to SP0",
+            "1": "Mode B; formfeed to SP0",
+            "10": "Mode A; no formfeed",
+            "11": "Mode B; no formfeed",
+            "12": "Fixed mode A; formfeed",
+            "13": "Fixed mode B; formfeed",
+            "14": "Fixed mode A; no formfeed",
+            "15": "Fixed mode B; no formfeed",
+            "2": "Mode A; no formfeed to SP0",
+            "3": "Mode B; no formfeed to SP0",
+            "4": "Fixed mode A; formfeed",
+            "5": "Fixed mode B; formfeed",
+            "6": "Fixed mode A; no formfeed",
+            "7": "Fixed mode B; no formfeed",
+            "8": "Mode A; formfeed",
+            "9": "Mode B; formfeed"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "KC-GL options"
+        }
+      ]
+    },
+    "Format": "FRPO G0,#1;"
+  },
+  "G1": {
+    "Prescribe Command": "G1",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G1,#1;\nParameter: G1\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "01",
+      "Format": "FRPO G1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G1",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G1,#1;"
+  },
+  "G2": {
+    "Prescribe Command": "G2",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G2,#1;\nParameter: G2\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "02",
+      "Format": "FRPO G2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G2",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G2,#1;"
+  },
+  "G3": {
+    "Prescribe Command": "G3",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G3,#1;\nParameter: G3\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "03",
+      "Format": "FRPO G3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G3",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G3,#1;"
+  },
+  "G4": {
+    "Prescribe Command": "G4",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G4,#1;\nParameter: G4\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "04",
+      "Format": "FRPO G4,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G4",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G4,#1;"
+  },
+  "G5": {
+    "Prescribe Command": "G5",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G5,#1;\nParameter: G5\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "05",
+      "Format": "FRPO G5,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G5",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G5,#1;"
+  },
+  "G6": {
+    "Prescribe Command": "G6",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G6,#1;\nParameter: G6\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "06",
+      "Format": "FRPO G6,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G6",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G6,#1;"
+  },
+  "G7": {
+    "Prescribe Command": "G7",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G7,#1;\nParameter: G7\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "07",
+      "Format": "FRPO G7,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G7",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G7,#1;"
+  },
+  "G8": {
+    "Prescribe Command": "G8",
+    "Text Description": "Name: KC-GL pen width\nFormat: FRPO G8,#1;\nParameter: G8\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing dot\n",
+    "Original Entry": {
+      "Environment": "KC-GL pen width",
+      "Factory Setting": "08",
+      "Format": "FRPO G8,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "G8",
+      "Values": [
+        {
+          "Comment": "dot",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO G8,#1;"
+  },
+  "H1": {
+    "Prescribe Command": "H1",
+    "Text Description": "Name: Serial interface baud rate\nFormat: FRPO H1,#1;\nParameter: H1\nThe command accepts the following arguments in Position #1: \n11 = 115200 bps\n12 = 1200 bps\n19 = 19200 bps\n24 = 2400 bps\n3 = 300 bps (not valid for some models)\n38 = 38400 bps\n48 = 4800 bps\n57 = 57600 bps\n6 = 600 bps (not valid for some models)\n96 = 9600 bps\n",
+    "Original Entry": {
+      "Environment": "Serial interface baud rate",
+      "Factory Setting": 96,
+      "Format": "FRPO H1,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H1",
+      "Values": [
+        {
+          "Options": {
+            "11": "115200 bps",
+            "12": "1200 bps",
+            "19": "19200 bps",
+            "24": "2400 bps",
+            "3": "300 bps (not valid for some models)",
+            "38": "38400 bps",
+            "48": "4800 bps",
+            "57": "57600 bps",
+            "6": "600 bps (not valid for some models)",
+            "96": "9600 bps"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Faux Baud Rate"
+        }
+      ]
+    },
+    "Format": "FRPO H1,#1;"
+  },
+  "H2": {
+    "Prescribe Command": "H2",
+    "Text Description": "Name: Serial interface data bits\nFormat: FRPO H2,#1;\nParameter: H2\nThe command accepts the following arguments in Position #1: \n7 = 7\n8 = 8\n",
+    "Original Entry": {
+      "Environment": "Serial interface data bits",
+      "Factory Setting": 8,
+      "Format": "FRPO H2,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H2",
+      "Values": [
+        {
+          "Options": {
+            "7": "7",
+            "8": "8"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Serial Interface Bits"
+        }
+      ]
+    },
+    "Format": "FRPO H2,#1;"
+  },
+  "H3": {
+    "Prescribe Command": "H3",
+    "Text Description": "Name: Serial interface stop bits\nFormat: FRPO H3,#1;\nParameter: H3\nThe command accepts the following arguments in Position #1: \n0 = 1 or 2\n1 = 1 or 2\n",
+    "Original Entry": {
+      "Environment": "Serial interface stop bits",
+      "Factory Setting": 1,
+      "Format": "FRPO H3,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H3",
+      "Values": [
+        {
+          "Options": {
+            "0": "1 or 2",
+            "1": "1 or 2"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Serial Interface Stop Bits"
+        }
+      ]
+    },
+    "Format": "FRPO H3,#1;"
+  },
+  "H4": {
+    "Prescribe Command": "H4",
+    "Text Description": "Name: Serial interface parity\nFormat: FRPO H4,#1;\nParameter: H4\nThe command accepts the following arguments in Position #1: \n0 = None\n1 = Odd\n2 = Even\n3 = Ignore\n",
+    "Original Entry": {
+      "Environment": "Serial interface parity",
+      "Factory Setting": 0,
+      "Format": "FRPO H4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H4",
+      "Values": [
+        {
+          "Options": {
+            "0": "None",
+            "1": "Odd",
+            "2": "Even",
+            "3": "Ignore"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Serial Interface Parity"
+        }
+      ]
+    },
+    "Format": "FRPO H4,#1;"
+  },
+  "H5": {
+    "Prescribe Command": "H5",
+    "Text Description": "Name: Serial interface protocol\nFormat: FRPO H5,#1;\nParameter: H5\nThe command accepts the following arguments in Position #1: \n0 = Combination of 1 and 3 below\n1 = DTR, positive true\n2 = DTR, negative true\n3 = XON/XOFF\n4 = ETX/ACK\n5 = XON/XOFF recognized only as protocol\n",
+    "Original Entry": {
+      "Environment": "Serial interface protocol",
+      "Factory Setting": 0,
+      "Format": "FRPO H5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H5",
+      "Values": [
+        {
+          "Options": {
+            "0": "Combination of 1 and 3 below",
+            "1": "DTR, positive true",
+            "2": "DTR, negative true",
+            "3": "XON/XOFF",
+            "4": "ETX/ACK",
+            "5": "XON/XOFF recognized only as protocol"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Serial Interface Protocol"
+        }
+      ]
+    },
+    "Format": "FRPO H5,#1;"
+  },
+  "H8": {
+    "Prescribe Command": "H8",
+    "Text Description": "Name: Total host buffer size\nFormat: FRPO H8,#1;\nParameter: H8\nThe command accepts the following arguments in Position #1: \nMin Value = 1 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Total host buffer size",
+      "Factory Setting": "5 (monochrome model), 10 (monochrome model with network Interface), or 12 (color model)",
+      "Format": "FRPO H8,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H8",
+      "Values": [
+        {
+          "Comment": "0 to 99 in units of the size defined by FRPO S5",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 1
+        }
+      ]
+    },
+    "Format": "FRPO H8,#1;"
+  },
+  "H9": {
+    "Prescribe Command": "H9",
+    "Text Description": "Name: Form feed time-out value\nFormat: FRPO H9,#1;\nParameter: H9\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Form feed time-out value",
+      "Factory Setting": 6,
+      "Format": "FRPO H9,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "H9",
+      "Values": [
+        {
+          "Comment": "Value in unites of 5 seconds (0 to 99).",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO H9,#1;"
+  },
+  "INIT": {
+    "Prescribe Command": "INIT",
+    "Text Description": "Name: Initializes FRPO settings to default settings.\nFormat: FRPO INIT;\nParameter: INIT\nThis parameter does not take any arguments. But it does Initializes FRPO settings to factory default.\n",
+    "Original Entry": {
+      "Environment": "Initializes FRPO settings to default settings.",
+      "Factory Setting": 1,
+      "Format": "FRPO INIT;",
+      "Interface": "None",
+      "Parameter": "INIT",
+      "Note": "Initializes FRPO settings to factory default.",
+      "Values": []
+    },
+    "Format": "FRPO INIT;"
+  },
+  "I5": {
+    "Prescribe Command": "I5",
+    "Text Description": "Name: Sleep timer\nFormat: FRPO I5,#1;\nParameter: I5\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Sleep timer",
+      "Factory Setting": 1,
+      "Format": "FRPO I5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "I5",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Sleep Timer"
+        }
+      ]
+    },
+    "Format": "FRPO I5,#1;"
+  },
+  "J0": {
+    "Prescribe Command": "J0",
+    "Text Description": "Name: Reduce/enlarge ratio (Models supporting A3 size only)\nFormat: FRPO J0,#1;\nParameter: J0\nThe command accepts the following arguments in Position #1: \n0 = 100%\n5 = 70%\n6 = 81%\n7 = 86%\n8 = 94%\n9 = 98%\n",
+    "Original Entry": {
+      "Environment": "Reduce/enlarge ratio (Models supporting A3 size only)",
+      "Factory Setting": 0,
+      "Format": "FRPO J0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "J0",
+      "Values": [
+        {
+          "Options": {
+            "0": "100%",
+            "5": "70%",
+            "6": "81%",
+            "7": "86%",
+            "8": "94%",
+            "9": "98%"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Enlarge/Reduce Ratio"
+        }
+      ]
+    },
+    "Format": "FRPO J0,#1;"
+  },
+  "J9": {
+    "Prescribe Command": "J9",
+    "Text Description": "Name: KC-GL enlarge mode\nFormat: FRPO J9,#1;\nParameter: J9\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = A2\n2 = A1\n3 = A0\n4 = B3\n5 = B2\n6 = B1\n7 = B0\n",
+    "Original Entry": {
+      "Environment": "KC-GL enlarge mode",
+      "Factory Setting": 0,
+      "Format": "FRPO J9,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "J9",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "A2",
+            "2": "A1",
+            "3": "A0",
+            "4": "B3",
+            "5": "B2",
+            "6": "B1",
+            "7": "B0"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "KC-GL enlarge Mode"
+        }
+      ]
+    },
+    "Format": "FRPO J9,#1;"
+  },
+  "N0": {
+    "Prescribe Command": "N0",
+    "Text Description": "Name: KIR mode\nFormat: FRPO N0,#1;\nParameter: N0\nThe command accepts the following arguments in Position #1: \n0 = Off\n2 = On\n",
+    "Original Entry": {
+      "Environment": "KIR mode",
+      "Factory Setting": 2,
+      "Format": "FRPO N0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "N0",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "2": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO N0,#1;"
+  },
+  "N4": {
+    "Prescribe Command": "N4",
+    "Text Description": "Name: Duplex mode\nFormat: FRPO N4,#1;\nParameter: N4\nThe command accepts the following arguments in Position #1: \n0 = Simplex mode\n1 = Long-edge binding\n2 = Short-edge binding\n",
+    "Original Entry": {
+      "Environment": "Duplex mode",
+      "Factory Setting": 0,
+      "Format": "FRPO N4,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "N4",
+      "Values": [
+        {
+          "Options": {
+            "0": "Simplex mode",
+            "1": "Long-edge binding",
+            "2": "Short-edge binding"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Duplex Setting"
+        }
+      ]
+    },
+    "Format": "FRPO N4,#1;"
+  },
+  "N5": {
+    "Prescribe Command": "N5",
+    "Text Description": "Name: Sleep timer time-out time\nFormat: FRPO N5,#1;\nParameter: N5\nThe command accepts the following arguments in Position #1: \nMin Value = 1 and Max value = 48\n",
+    "Original Entry": {
+      "Environment": "Sleep timer time-out time",
+      "Factory Setting": 6,
+      "Format": "FRPO N5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "N5",
+      "Values": [
+        {
+          "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]",
+          "Position": 1,
+          "Type": "Range",
+          "max": 48,
+          "min": 1
+        }
+      ]
+    },
+    "Format": "FRPO N5,#1;"
+  },
+  "N6": {
+    "Prescribe Command": "N6",
+    "Text Description": "Name: Ecoprint level\nFormat: FRPO N6,#1;\nParameter: N6\nThe command accepts the following arguments in Position #1: \n0 = Off\n2 = On\n",
+    "Original Entry": {
+      "Environment": "Ecoprint level",
+      "Factory Setting": 0,
+      "Format": "FRPO N6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "N6",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "2": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Ecoprint Level"
+        }
+      ]
+    },
+    "Format": "FRPO N6,#1;"
+  },
+  "N7": {
+    "Prescribe Command": "N7",
+    "Text Description": "Name: Duplex\nFormat: FRPO N7,#1;\nParameter: N7\nThe command accepts the following arguments in Position #1: \n0 = Normal\n1 = Reverse output pages\n2 = Allow duplex from the MP tray\n3 = Allow duplex from the MP tray; reversing the output pages\n",
+    "Original Entry": {
+      "Environment": "Duplex",
+      "Factory Setting": 0,
+      "Format": "FRPO N7,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "N7",
+      "Values": [
+        {
+          "Options": {
+            "0": "Normal",
+            "1": "Reverse output pages",
+            "2": "Allow duplex from the MP tray",
+            "3": "Allow duplex from the MP tray; reversing the output pages"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Duplex Tray Settings"
+        }
+      ]
+    },
+    "Format": "FRPO N7,#1;"
+  },
+  "N8": {
+    "Prescribe Command": "N8",
+    "Text Description": "Name: Printing resolution\nFormat: FRPO N8,#1;\nParameter: N8\nThe command accepts the following arguments in Position #1: \n0 = 300 dpi\n1 = 600 dpi\n3 = 1200 dpi\n",
+    "Original Entry": {
+      "Environment": "Printing resolution",
+      "Factory Setting": 1,
+      "Format": "FRPO N8,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "N8",
+      "Values": [
+        {
+          "Options": {
+            "0": "300 dpi",
+            "1": "600 dpi",
+            "3": "1200 dpi"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Print Resolution"
+        }
+      ]
+    },
+    "Format": "FRPO N8,#1;"
+  },
+  "O0": {
+    "Prescribe Command": "O0",
+    "Text Description": "Name: Parallel Interface Mode\nFormat: FRPO O0,#1;\nParameter: O0\nThe command accepts the following arguments in Position #1: \n0 = Normal\n1 = High-speed\n5 = Nibble (high)\n70 = Auto (Negotiation)\n",
+    "Original Entry": {
+      "Environment": "Parallel Interface Mode",
+      "Factory Setting": 5,
+      "Format": "FRPO O0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "O0",
+      "Values": [
+        {
+          "Options": {
+            "0": "Normal",
+            "1": "High-speed",
+            "5": "Nibble (high)",
+            "70": "Auto (Negotiation)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Parallel Interface"
+        }
+      ]
+    },
+    "Format": "FRPO O0,#1;"
+  },
+  "P1": {
+    "Prescribe Command": "P1",
+    "Text Description": "Name: Default emulation mode\nFormat: FRPO P1,#1;\nParameter: P1\nThe command accepts the following arguments in Position #1: \n0 = Line Printer\n1 = IBM Proprinter X24E\n2 = Diablo 630\n5 = Epson LQ-850\n6 = HP LaserJet\n8 = KC-GL\n9 = KPDL\n",
+    "Original Entry": {
+      "Environment": "Default emulation mode",
+      "Factory Setting": 6,
+      "Format": "FRPO P1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P1",
+      "Values": [
+        {
+          "Options": {
+            "0": "Line Printer",
+            "1": "IBM Proprinter X24E",
+            "2": "Diablo 630",
+            "5": "Epson LQ-850",
+            "6": "HP LaserJet",
+            "8": "KC-GL",
+            "9": "KPDL"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Emulation Mode"
+        }
+      ]
+    },
+    "Format": "FRPO P1,#1;"
+  },
+  "P2": {
+    "Prescribe Command": "P2",
+    "Text Description": "Name: Carriage-return action\nFormat: FRPO P2,#1;\nParameter: P2\nThe command accepts the following arguments in Position #1: \n0 = Ignores 0x0d\n1 = Carriage-return\n2 = Carriage-return+linefeed\n",
+    "Original Entry": {
+      "Environment": "Carriage-return action",
+      "Factory Setting": 1,
+      "Format": "FRPO P2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P2",
+      "Values": [
+        {
+          "Options": {
+            "0": "Ignores 0x0d",
+            "1": "Carriage-return",
+            "2": "Carriage-return+linefeed"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Carriage Return Action"
+        }
+      ]
+    },
+    "Format": "FRPO P2,#1;"
+  },
+  "P3": {
+    "Prescribe Command": "P3",
+    "Text Description": "Name: Linefeed action\nFormat: FRPO P3,#1;\nParameter: P3\nThe command accepts the following arguments in Position #1: \n0 = Ignores 0x0d\n1 = Linefeed\n2 = Linefeed+carriage-return\n",
+    "Original Entry": {
+      "Environment": "Linefeed action",
+      "Factory Setting": 1,
+      "Format": "FRPO P3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P3",
+      "Values": [
+        {
+          "Options": {
+            "0": "Ignores 0x0d",
+            "1": "Linefeed",
+            "2": "Linefeed+carriage-return"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Linefeed Action"
+        }
+      ]
+    },
+    "Format": "FRPO P3,#1;"
+  },
+  "P4": {
+    "Prescribe Command": "P4",
+    "Text Description": "Name: Automatic emulation sensing\nFormat: FRPO P4,#1;\nParameter: P4\nThe command accepts the following arguments in Position #1: \n0 = AES disabled\n1 = AES enabled\n",
+    "Original Entry": {
+      "Environment": "Automatic emulation sensing",
+      "Factory Setting": 0,
+      "Format": "FRPO P4,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P4",
+      "Values": [
+        {
+          "Options": {
+            "0": "AES disabled",
+            "1": "AES enabled"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Enable/Disable Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO P4,#1;"
+  },
+  "P5": {
+    "Prescribe Command": "P5",
+    "Text Description": "Name: Alternative emulation\nFormat: FRPO P5,#1;\nParameter: P5\nThe command accepts the following arguments in Position #1: \n0 = Line Printer\n1 = IBM Proprinter X24E\n2 = Diablo 630\n5 = Epson LQ-850\n6 = HP LaserJet\n8 = KC-GL\n",
+    "Original Entry": {
+      "Environment": "Alternative emulation",
+      "Factory Setting": 6,
+      "Format": "FRPO P5,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P5",
+      "Values": [
+        {
+          "Options": {
+            "0": "Line Printer",
+            "1": "IBM Proprinter X24E",
+            "2": "Diablo 630",
+            "5": "Epson LQ-850",
+            "6": "HP LaserJet",
+            "8": "KC-GL"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "ALternate Emulation"
+        }
+      ]
+    },
+    "Format": "FRPO P5,#1;"
+  },
+  "P7": {
+    "Prescribe Command": "P7",
+    "Text Description": "Name: Automatic emulation switching trigger\nFormat: FRPO P7,#1;\nParameter: P7\nThe command accepts the following arguments in Position #1: \n0 = Page eject commands\n1 = None\n10 = Page eject commands; if AES fails, resolves to KPDL\n2 = Page eject and Prescribe EXIT\n4 = Prescibe EXIT\n5 = Formfeed (^L)\n6 = Page eject, Prescibe EXIT and formfeed\n7 = Prescribe EXIT and formfeed\n8 = Page eject commands; if AES fails, resolves to alterantive emulation (P5)\n9 = None; if AES fails, resolves to alterantive emulation\n",
+    "Original Entry": {
+      "Environment": "Automatic emulation switching trigger",
+      "Factory Setting": 10,
+      "Format": "FRPO P7,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "P7",
+      "Values": [
+        {
+          "Options": {
+            "0": "Page eject commands",
+            "1": "None",
+            "10": "Page eject commands; if AES fails, resolves to KPDL",
+            "2": "Page eject and Prescribe EXIT",
+            "4": "Prescibe EXIT",
+            "5": "Formfeed (^L)",
+            "6": "Page eject, Prescibe EXIT and formfeed",
+            "7": "Prescribe EXIT and formfeed",
+            "8": "Page eject commands; if AES fails, resolves to alterantive emulation (P5)",
+            "9": "None; if AES fails, resolves to alterantive emulation"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Emulation Trigger"
+        }
+      ]
+    },
+    "Format": "FRPO P7,#1;"
+  },
+  "P9": {
+    "Prescribe Command": "P9",
+    "Text Description": "Name: Command recognition character\nFormat: FRPO P9,#1;\nParameter: P9\nThe command accepts the following arguments in Position #1: \nMin Value = 1 and Max value = 48\n",
+    "Original Entry": {
+      "Environment": "Command recognition character",
+      "Factory Setting": 6,
+      "Format": "FRPO P9,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "P9",
+      "Values": [
+        {
+          "Comment": "Value in units of 5 minutes: 1 to 48 [5 to 240 min.]",
+          "Position": 1,
+          "Type": "Range",
+          "max": 48,
+          "min": 1
+        }
+      ]
+    },
+    "Format": "FRPO P9,#1;"
+  },
+  "R0": {
+    "Prescribe Command": "R0",
+    "Text Description": "Name: Default stacker\nFormat: FRPO R0,#1;\nParameter: R0\nThe command accepts the following arguments in Position #1: \n1 = Face-down tray\n2 = Face-up tray\n3 = Bulk tray\n",
+    "Original Entry": {
+      "Environment": "Default stacker",
+      "Factory Setting": 1,
+      "Format": "FRPO R0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R0",
+      "Values": [
+        {
+          "Options": {
+            "1": "Face-down tray",
+            "2": "Face-up tray",
+            "3": "Bulk tray"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Stacker"
+        }
+      ]
+    },
+    "Format": "FRPO R0,#1;"
+  },
+  "R2": {
+    "Prescribe Command": "R2",
+    "Text Description": "Name: Default paper size\nFormat: FRPO R2,#1;\nParameter: R2\nThe command accepts the following arguments in Position #1: \n0 = Size of the default paper cassette (See R4)\n1 = Monarch (3-7/8 x 7-1/2 inches)\n10 = A3 (29.7 x 42 cm)\n11 = B4 (25.7 x 36.4 cm)\n12 = US Ledger (11 x 17 inches)\n13 = A5 (14.8 x 21 cm)\n14 = A6 (10.5 x 14.8 cm)\n15 = JIS B6( 12.8 x 18.2 cm)\n16 = Commercial #9 (3-7/8 x 8-7/8 inches)\n17 = Commercial #6 (3-5/8 x 6-1/2 inches)\n18 = ISOB5 (17.6 x 25 cm)\n19 = Custom (11.7 x 17.7 inches)\n2 = Business (4-1/8 x 9-1/2 inches)\n20 = B4 to A4\n21 = A3 to A4\n22 = A4 to A4 [98%]\n23 = STK to A4\n24 = STK to B4\n3 = International DL (11 x 22 cm)\n30 = C4 (22.9 x 32.4 cm)\n31 = Hagaki (10 x 14.8 cm)\n32 = Ofuku-Hagaki (14.8 x 20 cm)\n33 = Officio II\n34 = Special 1\n35 = Special 2\n36 = A3 Wide\n37 = Ledger Wide\n38 = 12 x 18\n39 = 8K\n4 = International C5 (16.2 x 22.9 cm)\n40 = 16K\n42 = 216 x 340\n43 = 13 x 19\n44 = SRA3\n45 = KAKUGATA2\n46 = NAGAGATA3\n47 = YOUNAGA3\n48 = NAGAGATA4\n49 = 13 x 19.2\n5 = Executive (7-1/4 x 10-1/2 inches)\n50 = Statement\n51 = Folio\n52 = Youkei 2\n53 = Youkei 4\n6 = US Letter (8-1/2 x 11 inches)\n7 = US Legal (8-1/2 x 14 inches)\n8 = A4 (21.0 x 29.7 cm)\n9 = JIS B5 (18.2 x 25.7 cm)\n",
+    "Original Entry": {
+      "Environment": "Default paper size",
+      "Factory Setting": 0,
+      "Format": "FRPO R2,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R2",
+      "Values": [
+        {
+          "Options": {
+            "0": "Size of the default paper cassette (See R4)",
+            "1": "Monarch (3-7/8 x 7-1/2 inches)",
+            "10": "A3 (29.7 x 42 cm)",
+            "11": "B4 (25.7 x 36.4 cm)",
+            "12": "US Ledger (11 x 17 inches)",
+            "13": "A5 (14.8 x 21 cm)",
+            "14": "A6 (10.5 x 14.8 cm)",
+            "15": "JIS B6( 12.8 x 18.2 cm)",
+            "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+            "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+            "18": "ISOB5 (17.6 x 25 cm)",
+            "19": "Custom (11.7 x 17.7 inches)",
+            "2": "Business (4-1/8 x 9-1/2 inches)",
+            "20": "B4 to A4",
+            "21": "A3 to A4",
+            "22": "A4 to A4 [98%]",
+            "23": "STK to A4",
+            "24": "STK to B4",
+            "3": "International DL (11 x 22 cm)",
+            "30": "C4 (22.9 x 32.4 cm)",
+            "31": "Hagaki (10 x 14.8 cm)",
+            "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+            "33": "Officio II",
+            "34": "Special 1",
+            "35": "Special 2",
+            "36": "A3 Wide",
+            "37": "Ledger Wide",
+            "38": "12 x 18",
+            "39": "8K",
+            "4": "International C5 (16.2 x 22.9 cm)",
+            "40": "16K",
+            "42": "216 x 340",
+            "43": "13 x 19",
+            "44": "SRA3",
+            "45": "KAKUGATA2",
+            "46": "NAGAGATA3",
+            "47": "YOUNAGA3",
+            "48": "NAGAGATA4",
+            "49": "13 x 19.2",
+            "5": "Executive (7-1/4 x 10-1/2 inches)",
+            "50": "Statement",
+            "51": "Folio",
+            "52": "Youkei 2",
+            "53": "Youkei 4",
+            "6": "US Letter (8-1/2 x 11 inches)",
+            "7": "US Legal (8-1/2 x 14 inches)",
+            "8": "A4 (21.0 x 29.7 cm)",
+            "9": "JIS B5 (18.2 x 25.7 cm)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Paper Size"
+        }
+      ]
+    },
+    "Format": "FRPO R2,#1;"
+  },
+  "R3": {
+    "Prescribe Command": "R3",
+    "Text Description": "Name: Default margin settings\nFormat: FRPO R3,#1;\nParameter: R3\nThe command accepts the following arguments in Position #1: \n0 = HP compatible margins\n1 = Full PCL printable area\n10 = IBM HT reference point as the left margin\n11 = Full PCL printable area for HP emulation; HT refernce point as the left margin in IBM emulation\n12 = Uses Courier font for IBM emulation, using the pitch given by U2 and U3\n2 = Character pitch given by U2 and U3\n3 = Full PCL printable area with character pitches given by U2 and U3\n",
+    "Original Entry": {
+      "Environment": "Default margin settings",
+      "Factory Setting": 0,
+      "Format": "FRPO R3,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R3",
+      "Values": [
+        {
+          "Options": {
+            "0": "HP compatible margins",
+            "1": "Full PCL printable area",
+            "10": "IBM HT reference point as the left margin",
+            "11": "Full PCL printable area for HP emulation; HT refernce point as the left margin in IBM emulation",
+            "12": "Uses Courier font for IBM emulation, using the pitch given by U2 and U3",
+            "2": "Character pitch given by U2 and U3",
+            "3": "Full PCL printable area with character pitches given by U2 and U3"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Margin Setting"
+        }
+      ]
+    },
+    "Format": "FRPO R3,#1;"
+  },
+  "R4": {
+    "Prescribe Command": "R4",
+    "Text Description": "Name: Default cassette\nFormat: FRPO R4,#1;\nParameter: R4\nThe command accepts the following arguments in Position #1: \n0 = Multi-purpose tray\n1 = Cassette 1\n2 = Cassette 2\n3 = Cassette 3\n4 = Cassette 4\n5 = Cassette 5\n6 = Cassette 6\n7 = Cassette 7\n99 = Envelope/universal feeder (FS-9000)\n",
+    "Original Entry": {
+      "Environment": "Default cassette",
+      "Factory Setting": 1,
+      "Format": "FRPO R4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R4",
+      "Values": [
+        {
+          "Options": {
+            "0": "Multi-purpose tray",
+            "1": "Cassette 1",
+            "2": "Cassette 2",
+            "3": "Cassette 3",
+            "4": "Cassette 4",
+            "5": "Cassette 5",
+            "6": "Cassette 6",
+            "7": "Cassette 7",
+            "99": "Envelope/universal feeder (FS-9000)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette"
+        }
+      ]
+    },
+    "Format": "FRPO R4,#1;"
+  },
+  "R7": {
+    "Prescribe Command": "R7",
+    "Text Description": "Name: MP tray paper size\nFormat: FRPO R7,#1;\nParameter: R7\nThe command accepts the following arguments in Position #1: \n0 = Maximum paper size of the printing system\n1 = Monarch (3-7/8 x 7-1/2 inches)\n10 = A3 (29.7 x 42 cm)\n11 = B4 (25.7 x 36.4 cm)\n12 = US Ledger (11 x 17 inches)\n13 = A5 (14.8 x 21 cm)\n14 = A6 (10.5 x 14.8 cm)\n15 = JIS B6( 12.8 x 18.2 cm)\n16 = Commercial #9 (3-7/8 x 8-7/8 inches)\n17 = Commercial #6 (3-5/8 x 6-1/2 inches)\n18 = ISOB5 (17.6 x 25 cm)\n19 = Custom (11.7 x 17.7 inches)\n2 = Business (4-1/8 x 9-1/2 inches)\n20 = B4 to A4\n21 = A3 to A4\n22 = A4 to A4 [98%]\n23 = STK to A4\n24 = STK to B4\n3 = International DL (11 x 22 cm)\n30 = C4 (22.9 x 32.4 cm)\n31 = Hagaki (10 x 14.8 cm)\n32 = Ofuku-Hagaki (14.8 x 20 cm)\n33 = Officio II\n34 = Special 1\n35 = Special 2\n36 = A3 Wide\n37 = Ledger Wide\n38 = 12 x 18\n39 = 8K\n4 = International C5 (16.2 x 22.9 cm)\n40 = 16K\n42 = 216 x 340\n43 = 13 x 19\n44 = SRA3\n45 = KAKUGATA2\n46 = NAGAGATA3\n47 = YOUNAGA3\n48 = NAGAGATA4\n49 = 13 x 19.2\n5 = Executive (7-1/4 x 10-1/2 inches)\n50 = Statement\n51 = Folio\n52 = Youkei 2\n53 = Youkei 4\n6 = US Letter (8-1/2 x 11 inches)\n7 = US Legal (8-1/2 x 14 inches)\n8 = A4 (21.0 x 29.7 cm)\n9 = JIS B5 (18.2 x 25.7 cm)\n",
+    "Original Entry": {
+      "Environment": "MP tray paper size",
+      "Factory Setting": 0,
+      "Format": "FRPO R7,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R7",
+      "Values": [
+        {
+          "Options": {
+            "0": "Maximum paper size of the printing system",
+            "1": "Monarch (3-7/8 x 7-1/2 inches)",
+            "10": "A3 (29.7 x 42 cm)",
+            "11": "B4 (25.7 x 36.4 cm)",
+            "12": "US Ledger (11 x 17 inches)",
+            "13": "A5 (14.8 x 21 cm)",
+            "14": "A6 (10.5 x 14.8 cm)",
+            "15": "JIS B6( 12.8 x 18.2 cm)",
+            "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+            "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+            "18": "ISOB5 (17.6 x 25 cm)",
+            "19": "Custom (11.7 x 17.7 inches)",
+            "2": "Business (4-1/8 x 9-1/2 inches)",
+            "20": "B4 to A4",
+            "21": "A3 to A4",
+            "22": "A4 to A4 [98%]",
+            "23": "STK to A4",
+            "24": "STK to B4",
+            "3": "International DL (11 x 22 cm)",
+            "30": "C4 (22.9 x 32.4 cm)",
+            "31": "Hagaki (10 x 14.8 cm)",
+            "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+            "33": "Officio II",
+            "34": "Special 1",
+            "35": "Special 2",
+            "36": "A3 Wide",
+            "37": "Ledger Wide",
+            "38": "12 x 18",
+            "39": "8K",
+            "4": "International C5 (16.2 x 22.9 cm)",
+            "40": "16K",
+            "42": "216 x 340",
+            "43": "13 x 19",
+            "44": "SRA3",
+            "45": "KAKUGATA2",
+            "46": "NAGAGATA3",
+            "47": "YOUNAGA3",
+            "48": "NAGAGATA4",
+            "49": "13 x 19.2",
+            "5": "Executive (7-1/4 x 10-1/2 inches)",
+            "50": "Statement",
+            "51": "Folio",
+            "52": "Youkei 2",
+            "53": "Youkei 4",
+            "6": "US Letter (8-1/2 x 11 inches)",
+            "7": "US Legal (8-1/2 x 14 inches)",
+            "8": "A4 (21.0 x 29.7 cm)",
+            "9": "JIS B5 (18.2 x 25.7 cm)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "MP Paper Size"
+        }
+      ]
+    },
+    "Format": "FRPO R7,#1;"
+  },
+  "R8": {
+    "Prescribe Command": "R8",
+    "Text Description": "Name: Daisywheel data length\nFormat: FRPO R8,#1;\nParameter: R8\nThe command accepts the following arguments in Position #1: \n7 = 7-bit\n8 = 8-bit\n",
+    "Original Entry": {
+      "Environment": "Daisywheel data length",
+      "Factory Setting": 7,
+      "Format": "FRPO R8,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R8",
+      "Values": [
+        {
+          "Options": {
+            "7": "7-bit",
+            "8": "8-bit"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Daisywheel Data"
+        }
+      ]
+    },
+    "Format": "FRPO R8,#1;"
+  },
+  "R9": {
+    "Prescribe Command": "R9",
+    "Text Description": "Name: Default envelope feeder paper size\nFormat: FRPO R9,#1;\nParameter: R9\nThe command accepts the following arguments in Position #1: \n0 = A4 or Letter\n1 = Monarch (3-7/8 x 7-1/2 inches)\n10 = A3 (29.7 x 42 cm)\n11 = B4 (25.7 x 36.4 cm)\n12 = US Ledger (11 x 17 inches)\n13 = A5 (14.8 x 21 cm)\n14 = A6 (10.5 x 14.8 cm)\n15 = JIS B6( 12.8 x 18.2 cm)\n16 = Commercial #9 (3-7/8 x 8-7/8 inches)\n17 = Commercial #6 (3-5/8 x 6-1/2 inches)\n18 = ISOB5 (17.6 x 25 cm)\n19 = Custom (11.7 x 17.7 inches)\n2 = Business (4-1/8 x 9-1/2 inches)\n20 = B4 to A4\n21 = A3 to A4\n22 = A4 to A4 [98%]\n23 = STK to A4\n24 = STK to B4\n3 = International DL (11 x 22 cm)\n30 = C4 (22.9 x 32.4 cm)\n31 = Hagaki (10 x 14.8 cm)\n32 = Ofuku-Hagaki (14.8 x 20 cm)\n33 = Officio II\n34 = Special 1\n35 = Special 2\n36 = A3 Wide\n37 = Ledger Wide\n38 = 12 x 18\n39 = 8K\n4 = International C5 (16.2 x 22.9 cm)\n40 = 16K\n42 = 216 x 340\n43 = 13 x 19\n44 = SRA3\n45 = KAKUGATA2\n46 = NAGAGATA3\n47 = YOUNAGA3\n48 = NAGAGATA4\n49 = 13 x 19.2\n5 = Executive (7-1/4 x 10-1/2 inches)\n50 = Statement\n51 = Folio\n52 = Youkei 2\n53 = Youkei 4\n6 = US Letter (8-1/2 x 11 inches)\n7 = US Legal (8-1/2 x 14 inches)\n8 = A4 (21.0 x 29.7 cm)\n9 = JIS B5 (18.2 x 25.7 cm)\n",
+    "Original Entry": {
+      "Environment": "Default envelope feeder paper size",
+      "Factory Setting": 0,
+      "Format": "FRPO R9,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "R9",
+      "Values": [
+        {
+          "Options": {
+            "0": "A4 or Letter",
+            "1": "Monarch (3-7/8 x 7-1/2 inches)",
+            "10": "A3 (29.7 x 42 cm)",
+            "11": "B4 (25.7 x 36.4 cm)",
+            "12": "US Ledger (11 x 17 inches)",
+            "13": "A5 (14.8 x 21 cm)",
+            "14": "A6 (10.5 x 14.8 cm)",
+            "15": "JIS B6( 12.8 x 18.2 cm)",
+            "16": "Commercial #9 (3-7/8 x 8-7/8 inches)",
+            "17": "Commercial #6 (3-5/8 x 6-1/2 inches)",
+            "18": "ISOB5 (17.6 x 25 cm)",
+            "19": "Custom (11.7 x 17.7 inches)",
+            "2": "Business (4-1/8 x 9-1/2 inches)",
+            "20": "B4 to A4",
+            "21": "A3 to A4",
+            "22": "A4 to A4 [98%]",
+            "23": "STK to A4",
+            "24": "STK to B4",
+            "3": "International DL (11 x 22 cm)",
+            "30": "C4 (22.9 x 32.4 cm)",
+            "31": "Hagaki (10 x 14.8 cm)",
+            "32": "Ofuku-Hagaki (14.8 x 20 cm)",
+            "33": "Officio II",
+            "34": "Special 1",
+            "35": "Special 2",
+            "36": "A3 Wide",
+            "37": "Ledger Wide",
+            "38": "12 x 18",
+            "39": "8K",
+            "4": "International C5 (16.2 x 22.9 cm)",
+            "40": "16K",
+            "42": "216 x 340",
+            "43": "13 x 19",
+            "44": "SRA3",
+            "45": "KAKUGATA2",
+            "46": "NAGAGATA3",
+            "47": "YOUNAGA3",
+            "48": "NAGAGATA4",
+            "49": "13 x 19.2",
+            "5": "Executive (7-1/4 x 10-1/2 inches)",
+            "50": "Statement",
+            "51": "Folio",
+            "52": "Youkei 2",
+            "53": "Youkei 4",
+            "6": "US Letter (8-1/2 x 11 inches)",
+            "7": "US Legal (8-1/2 x 14 inches)",
+            "8": "A4 (21.0 x 29.7 cm)",
+            "9": "JIS B5 (18.2 x 25.7 cm)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Envelope Size"
+        }
+      ]
+    },
+    "Format": "FRPO R9,#1;"
+  },
+  "S3": {
+    "Prescribe Command": "S3",
+    "Text Description": "Name: Sorter overfilling behavior\nFormat: FRPO S3,#1;\nParameter: S3\nThe command accepts the following arguments in Position #1: \n0 = Interrupts printing until trays are emptied\n1 = Bypasses printing to the face-down tray\n",
+    "Original Entry": {
+      "Environment": "Sorter overfilling behavior",
+      "Factory Setting": 0,
+      "Format": "FRPO S3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "S3",
+      "Values": [
+        {
+          "Options": {
+            "0": "Interrupts printing until trays are emptied",
+            "1": "Bypasses printing to the face-down tray"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Sorter Behavior"
+        }
+      ]
+    },
+    "Format": "FRPO S3,#1;"
+  },
+  "S4": {
+    "Prescribe Command": "S4",
+    "Text Description": "Name: A4/Letter equation\nFormat: FRPO S4,#1;\nParameter: S4\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "A4/Letter equation",
+      "Factory Setting": 0,
+      "Format": "FRPO S4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "S4",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO S4,#1;"
+  },
+  "S5": {
+    "Prescribe Command": "S5",
+    "Text Description": "Name: Host buffer size\nFormat: FRPO S5,#1;\nParameter: S5\nThe command accepts the following arguments in Position #1: \n0 = 10kB (x H8)\n1 = 100kB (x H8)\n2 = 1024kB (x H8)\n",
+    "Original Entry": {
+      "Environment": "Host buffer size",
+      "Factory Setting": 1,
+      "Format": "FRPO S5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "S5",
+      "Values": [
+        {
+          "Options": {
+            "0": "10kB (x H8)",
+            "1": "100kB (x H8)",
+            "2": "1024kB (x H8)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Host Buffer"
+        }
+      ]
+    },
+    "Format": "FRPO S5,#1;"
+  },
+  "S6": {
+    "Prescribe Command": "S6",
+    "Text Description": "Name: RAM disk capacity\nFormat: FRPO S6,#1;\nParameter: S6\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 1024\n",
+    "Original Entry": {
+      "Environment": "RAM disk capacity",
+      "Factory Setting": 50,
+      "Format": "FRPO S6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "S6",
+      "Values": [
+        {
+          "Comment": "Integer value of MB",
+          "Position": 1,
+          "Type": "Range",
+          "max": 1024,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO S6,#1;"
+  },
+  "S7": {
+    "Prescribe Command": "S7",
+    "Text Description": "Name: Host buffer size\nFormat: FRPO S7,#1;\nParameter: S7\nThe command accepts the following arguments in Position #1: \n0 = Disabled\n1 = Enabled\n",
+    "Original Entry": {
+      "Environment": "Host buffer size",
+      "Factory Setting": 0,
+      "Format": "FRPO S7,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "S7",
+      "Values": [
+        {
+          "Options": {
+            "0": "Disabled",
+            "1": "Enabled"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Enable/Disable Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO S7,#1;"
+  },
+  "T1": {
+    "Prescribe Command": "T1",
+    "Text Description": "Name: Cassette 1 paper size\nFormat: FRPO T1,#1;\nParameter: T1\nThe command accepts the following arguments in Position #1: \n13 = A5\n14 = A6\n18 = INT B5\n19 = CUSTOM\n33 = Oficio II\n4 = C5\n40 = 16K\n5 = Executive\n50 = Statement\n51 = Folio\n6 = Letter\n7 = Legal\n8 = A4\n9 = B5\n",
+    "Original Entry": {
+      "Environment": "Cassette 1 paper size",
+      "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+      "Format": "FRPO T1,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "T1",
+      "Values": [
+        {
+          "Options": {
+            "13": "A5",
+            "14": "A6",
+            "18": "INT B5",
+            "19": "CUSTOM",
+            "33": "Oficio II",
+            "4": "C5",
+            "40": "16K",
+            "5": "Executive",
+            "50": "Statement",
+            "51": "Folio",
+            "6": "Letter",
+            "7": "Legal",
+            "8": "A4",
+            "9": "B5"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 1 Size"
+        }
+      ]
+    },
+    "Format": "FRPO T1,#1;"
+  },
+  "T2": {
+    "Prescribe Command": "T2",
+    "Text Description": "Name: Cassette 2 paper size\nFormat: FRPO T2,#1;\nParameter: T2\nThe command accepts the following arguments in Position #1: \n13 = A5\n14 = A6\n18 = INT B5\n19 = CUSTOM\n33 = Oficio II\n4 = C5\n40 = 16K\n5 = Executive\n51 = Folio\n6 = Letter\n7 = Legal\n8 = A4\n9 = B5\n",
+    "Original Entry": {
+      "Environment": "Cassette 2 paper size",
+      "Factory Setting": "6 (U.S.A) or 8 (Euro and other)",
+      "Format": "FRPO T2,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "T2",
+      "Values": [
+        {
+          "Options": {
+            "13": "A5",
+            "14": "A6",
+            "18": "INT B5",
+            "19": "CUSTOM",
+            "33": "Oficio II",
+            "4": "C5",
+            "40": "16K",
+            "5": "Executive",
+            "51": "Folio",
+            "6": "Letter",
+            "7": "Legal",
+            "8": "A4",
+            "9": "B5"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 2 Size"
+        }
+      ]
+    },
+    "Format": "FRPO T2,#1;"
+  },
+  "T6": {
+    "Prescribe Command": "T6",
+    "Text Description": "Name: Wide A4\nFormat: FRPO T6,#1;\nParameter: T6\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Wide A4",
+      "Factory Setting": 0,
+      "Format": "FRPO T6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "T6",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO T6,#1;"
+  },
+  "T8": {
+    "Prescribe Command": "T8",
+    "Text Description": "Name: MP tray direction\nFormat: FRPO T8,#1;\nParameter: T8\nThe command accepts the following arguments in Position #1: \n0 = Short edge\n1 = Long edge\n",
+    "Original Entry": {
+      "Environment": "MP tray direction",
+      "Factory Setting": 1,
+      "Format": "FRPO T8,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "T8",
+      "Values": [
+        {
+          "Options": {
+            "0": "Short edge",
+            "1": "Long edge"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "MP Tray Direction"
+        }
+      ]
+    },
+    "Format": "FRPO T8,#1;"
+  },
+  "U0": {
+    "Prescribe Command": "U0",
+    "Text Description": "Name: Line spacing\nFormat: FRPO U0,#1;\nParameter: U0\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Lines per inch (Integer value)\n",
+    "Original Entry": {
+      "Environment": "Line spacing",
+      "Factory Setting": 6,
+      "Format": "FRPO U0,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U0",
+      "Values": [
+        {
+          "Comment": "Lines per inch (Integer value)",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO U0,#1;"
+  },
+  "U1": {
+    "Prescribe Command": "U1",
+    "Text Description": "Name: Line spacing\nFormat: FRPO U1,#1;\nParameter: U1\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Lines per inch (fraction value)\n",
+    "Original Entry": {
+      "Environment": "Line spacing",
+      "Factory Setting": 0,
+      "Format": "FRPO U1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U1",
+      "Values": [
+        {
+          "Comment": "Lines per inch (fraction value)",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO U1,#1;"
+  },
+  "U2": {
+    "Prescribe Command": "U2",
+    "Text Description": "Name: Character spacing\nFormat: FRPO U2,#1;\nParameter: U2\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Lines per inch (Integer value)\n",
+    "Original Entry": {
+      "Environment": "Character spacing",
+      "Factory Setting": 10,
+      "Format": "FRPO U2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U2",
+      "Values": [
+        {
+          "Comment": "Lines per inch (Integer value)",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO U2,#1;"
+  },
+  "U3": {
+    "Prescribe Command": "U3",
+    "Text Description": "Name: Character spacing\nFormat: FRPO U3,#1;\nParameter: U3\nThe command accepts the following arguments in Position #1: \nTakes an Integer value representing Lines per inch (fraction value)\n",
+    "Original Entry": {
+      "Environment": "Character spacing",
+      "Factory Setting": 0,
+      "Format": "FRPO U3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U3",
+      "Values": [
+        {
+          "Comment": "Lines per inch (fraction value)",
+          "Position": 1,
+          "Type": "Integer"
+        }
+      ]
+    },
+    "Format": "FRPO U3,#1;"
+  },
+  "U6": {
+    "Prescribe Command": "U6",
+    "Text Description": "Name: Country Code\nFormat: FRPO U6,#1;\nParameter: U6\nThe command accepts the following arguments in Position #1: \n0 = US-ASCII\n1 = France\n10 = IBM PC-850 (Multilingual)\n11 = IBM PC-860 (Portuguese)\n12 = IBM PC-863 (Canadian French)\n13 = IBM PC-865 (Norwegian)\n14 = Normway\n15 = Denmark 2\n16 = Spain 2\n17 = Latin America\n2 = Germany\n3 = UK\n4 = Denmark\n5 = Sweden\n6 = Italy\n7 = Spain\n8 = Japan\n9 = US Legal\nMin Value = 50 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Country Code",
+      "Factory Setting": 0,
+      "Format": "FRPO U6,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U6",
+      "Values": [
+        {
+          "Options": {
+            "0": "US-ASCII",
+            "1": "France",
+            "10": "IBM PC-850 (Multilingual)",
+            "11": "IBM PC-860 (Portuguese)",
+            "12": "IBM PC-863 (Canadian French)",
+            "13": "IBM PC-865 (Norwegian)",
+            "14": "Normway",
+            "15": "Denmark 2",
+            "16": "Spain 2",
+            "17": "Latin America",
+            "2": "Germany",
+            "3": "UK",
+            "4": "Denmark",
+            "5": "Sweden",
+            "6": "Italy",
+            "7": "Spain",
+            "8": "Japan",
+            "9": "US Legal"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Country Code"
+        },
+        {
+          "Comment": "HP PCL symbol set coding (see 7-37)",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 50
+        }
+      ]
+    },
+    "Format": "FRPO U6,#1;"
+  },
+  "U8": {
+    "Prescribe Command": "U8",
+    "Text Description": "Name: Font pitch for fixed-pitch scalable fonts\nFormat: FRPO U8,#1;\nParameter: U8\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Font pitch for fixed-pitch scalable fonts",
+      "Factory Setting": 10,
+      "Format": "FRPO U8,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U8",
+      "Values": [
+        {
+          "Comment": "Integer value in cpi: 0-99",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO U8,#1;"
+  },
+  "U9": {
+    "Prescribe Command": "U9",
+    "Text Description": "Name: Font pitch for fixed-pitch scalable fonts\nFormat: FRPO U9,#1;\nParameter: U9\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Font pitch for fixed-pitch scalable fonts",
+      "Factory Setting": 0,
+      "Format": "FRPO U9,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "U9",
+      "Values": [
+        {
+          "Comment": "Fraction value in 1/100 cpi: 0-99",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO U9,#1;"
+  },
+  "V0": {
+    "Prescribe Command": "V0",
+    "Text Description": "Name: Font height for the default scalable font\nFormat: FRPO V0,#1;\nParameter: V0\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 9\n",
+    "Original Entry": {
+      "Environment": "Font height for the default scalable font",
+      "Factory Setting": 0,
+      "Format": "FRPO V0,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "V0",
+      "Values": [
+        {
+          "Comment": "Integer value in 100 points: 0-9",
+          "Position": 1,
+          "Type": "Range",
+          "max": 9,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO V0,#1;"
+  },
+  "V1": {
+    "Prescribe Command": "V1",
+    "Text Description": "Name: Font height for the default scalable font\nFormat: FRPO V1,#1;\nParameter: V1\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 99\n",
+    "Original Entry": {
+      "Environment": "Font height for the default scalable font",
+      "Factory Setting": 12,
+      "Format": "FRPO V1,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "V1",
+      "Values": [
+        {
+          "Comment": "Integer value in points: 0-99",
+          "Position": 1,
+          "Type": "Range",
+          "max": 99,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO V1,#1;"
+  },
+  "V2": {
+    "Prescribe Command": "V2",
+    "Text Description": "Name: Font height for the default scalable font\nFormat: FRPO V2,#1;\nParameter: V2\nThe command accepts the following arguments in Position #1: \n0 = Fraction value in 1/100 points: 0, 25, 50, 75\n25 = Fraction value in 1/100 points: 0, 25, 50, 75\n50 = Fraction value in 1/100 points: 0, 25, 50, 75\n75 = Fraction value in 1/100 points: 0, 25, 50, 75\n",
+    "Original Entry": {
+      "Environment": "Font height for the default scalable font",
+      "Factory Setting": 0,
+      "Format": "FRPO V2,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "V2",
+      "Values": [
+        {
+          "Options": {
+            "0": "Fraction value in 1/100 points: 0, 25, 50, 75",
+            "25": "Fraction value in 1/100 points: 0, 25, 50, 75",
+            "50": "Fraction value in 1/100 points: 0, 25, 50, 75",
+            "75": "Fraction value in 1/100 points: 0, 25, 50, 75"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Font Height in 1/100 Inch"
+        }
+      ]
+    },
+    "Format": "FRPO V2,#1;"
+  },
+  "V3": {
+    "Prescribe Command": "V3",
+    "Text Description": "Name: Default scalable font\nFormat: FRPO V3,#1;\nParameter: V3\nThe command accepts the following arguments in Position #1: \nTakes an String value representing Name of typeface of up to 32 characters, enclosed with single or double quotation marks\n",
+    "Original Entry": {
+      "Environment": "Default scalable font",
+      "Factory Setting": "-",
+      "Format": "FRPO V3,#1;",
+      "Interface": "Interface Dependent",
+      "Parameter": "V3",
+      "Values": [
+        {
+          "Comment": "Name of typeface of up to 32 characters, enclosed with single or double quotation marks",
+          "Position": 1,
+          "Type": "String"
+        }
+      ]
+    },
+    "Format": "FRPO V3,#1;"
+  },
+  "V9": {
+    "Prescribe Command": "V9",
+    "Text Description": "Name: Default Courier weight\nFormat: FRPO V9,#1;\nParameter: V9\nThe command accepts the following arguments in Position #1: \n0 = Dark\n1 = Normal\n",
+    "Original Entry": {
+      "Environment": "Default Courier weight",
+      "Factory Setting": 0,
+      "Format": "FRPO V9,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "V9",
+      "Values": [
+        {
+          "Options": {
+            "0": "Dark",
+            "1": "Normal"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Courier Weight"
+        }
+      ]
+    },
+    "Format": "FRPO V9,#1;"
+  },
+  "W1": {
+    "Prescribe Command": "W1",
+    "Text Description": "Name: Color mode\nFormat: FRPO W1,#1;\nParameter: W1\nThe command accepts the following arguments in Position #1: \n0 = Monochrome (grayscale)\n1 = Color (CMYK)\n2 = Quick color (CMY)\n",
+    "Original Entry": {
+      "Environment": "Color mode",
+      "Factory Setting": 1,
+      "Format": "FRPO W1,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "W1",
+      "Values": [
+        {
+          "Options": {
+            "0": "Monochrome (grayscale)",
+            "1": "Color (CMYK)",
+            "2": "Quick color (CMY)"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Color Mode"
+        }
+      ]
+    },
+    "Format": "FRPO W1,#1;"
+  },
+  "W6": {
+    "Prescribe Command": "W6",
+    "Text Description": "Name: Gloss mode\nFormat: FRPO W6,#1;\nParameter: W6\nThe command accepts the following arguments in Position #1: \n0 = Low (normal)\n1 = High\n",
+    "Original Entry": {
+      "Environment": "Gloss mode",
+      "Factory Setting": 0,
+      "Format": "FRPO W6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "W6",
+      "Values": [
+        {
+          "Options": {
+            "0": "Low (normal)",
+            "1": "High"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Gloss Mode"
+        }
+      ]
+    },
+    "Format": "FRPO W6,#1;"
+  },
+  "X0": {
+    "Prescribe Command": "X0",
+    "Text Description": "Name: Paper type for the MP tray\nFormat: FRPO X0,#1;\nParameter: X0\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n12 = Envelope\n13 = Cardstock\n14 = Coated Sheet\n15 = Backing Sheet\n16 = Thick Sheet\n17 = High-quality Sheet\n18 = Index Tabs\n2 = Transparency\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n4 = Label\n5 = Bond\n6 = Recycle\n7 = Vellum\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for the MP tray",
+      "Factory Setting": 1,
+      "Format": "FRPO X0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X0",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "12": "Envelope",
+            "13": "Cardstock",
+            "14": "Coated Sheet",
+            "15": "Backing Sheet",
+            "16": "Thick Sheet",
+            "17": "High-quality Sheet",
+            "18": "Index Tabs",
+            "2": "Transparency",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "4": "Label",
+            "5": "Bond",
+            "6": "Recycle",
+            "7": "Vellum",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "MP Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X0,#1;"
+  },
+  "X1": {
+    "Prescribe Command": "X1",
+    "Text Description": "Name: Paper type for paper cassette 1\nFormat: FRPO X1,#1;\nParameter: X1\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 1",
+      "Factory Setting": 1,
+      "Format": "FRPO X1,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X1",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 1 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X1,#1;"
+  },
+  "X2": {
+    "Prescribe Command": "X2",
+    "Text Description": "Name: Paper type for paper cassette 2\nFormat: FRPO X2,#1;\nParameter: X2\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 2",
+      "Factory Setting": 1,
+      "Format": "FRPO X2,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X2",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 2 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X2,#1;"
+  },
+  "X3": {
+    "Prescribe Command": "X3",
+    "Text Description": "Name: Paper type for paper cassette 3\nFormat: FRPO X3,#1;\nParameter: X3\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 3",
+      "Factory Setting": 1,
+      "Format": "FRPO X3,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X3",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 3 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X3,#1;"
+  },
+  "X4": {
+    "Prescribe Command": "X4",
+    "Text Description": "Name: Paper type for paper cassette 4\nFormat: FRPO X4,#1;\nParameter: X4\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 4",
+      "Factory Setting": 1,
+      "Format": "FRPO X4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X4",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 4 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X4,#1;"
+  },
+  "X5": {
+    "Prescribe Command": "X5",
+    "Text Description": "Name: Paper type for paper cassette 5\nFormat: FRPO X5,#1;\nParameter: X5\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 5",
+      "Factory Setting": 1,
+      "Format": "FRPO X5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X5",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 5 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X5,#1;"
+  },
+  "X6": {
+    "Prescribe Command": "X6",
+    "Text Description": "Name: Paper type for paper cassette 6\nFormat: FRPO X6,#1;\nParameter: X6\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n17 = High-quality Sheet\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n29 = Inkjet Paper\n3 = Preprinted\n30 = Inkjet Matte Paper\n31 = Thin Paper\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for paper cassette 6",
+      "Factory Setting": 1,
+      "Format": "FRPO X6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X6",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "17": "High-quality Sheet",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "29": "Inkjet Paper",
+            "3": "Preprinted",
+            "30": "Inkjet Matte Paper",
+            "31": "Thin Paper",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Cassette 6 Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X6,#1;"
+  },
+  "X7": {
+    "Prescribe Command": "X7",
+    "Text Description": "Name: Paper type for Envelope Feeder/Universal Feeder\nFormat: FRPO X7,#1;\nParameter: X7\nThe command accepts the following arguments in Position #1: \n1 = Plain\n10 = Color\n11 = Prepunched\n12 = Envelope\n13 = Cardstock\n21 = Custom 1\n22 = Custom 2\n23 = Custom 3\n24 = Custom 4\n25 = Custom 5\n26 = Custom 6\n27 = Custom 7\n28 = Custom 8\n3 = Preprinted\n4 = Label\n5 = Bond\n6 = Recycle\n8 = Rough\n9 = Letterhead\n",
+    "Original Entry": {
+      "Environment": "Paper type for Envelope Feeder/Universal Feeder",
+      "Factory Setting": 1,
+      "Format": "FRPO X7,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X7",
+      "Values": [
+        {
+          "Options": {
+            "1": "Plain",
+            "10": "Color",
+            "11": "Prepunched",
+            "12": "Envelope",
+            "13": "Cardstock",
+            "21": "Custom 1",
+            "22": "Custom 2",
+            "23": "Custom 3",
+            "24": "Custom 4",
+            "25": "Custom 5",
+            "26": "Custom 6",
+            "27": "Custom 7",
+            "28": "Custom 8",
+            "3": "Preprinted",
+            "4": "Label",
+            "5": "Bond",
+            "6": "Recycle",
+            "8": "Rough",
+            "9": "Letterhead"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "MP Paper Type"
+        }
+      ]
+    },
+    "Format": "FRPO X7,#1;"
+  },
+  "X9": {
+    "Prescribe Command": "X9",
+    "Text Description": "Name: PCL paper source\nFormat: FRPO X9,#1;\nParameter: X9\nThe command accepts the following arguments in Position #1: \n0 = Performs paper selection depending on media type.\n1 = Performs paper selection depending on paper sources.\n10 = Combination of value 2 and 8.\n11 = Combination of value 1, 2 and 8.\n2 = Performs paper selection which is compatible with HP-LJ8000.\n3 = Combination of value 1 and 2.\n8 = Performs paper selection in driver priority mode.\n9 = Combination of value 1 and 8.\n",
+    "Original Entry": {
+      "Environment": "PCL paper source",
+      "Factory Setting": "8 (model supporting driver priority mode) or 0 (other)",
+      "Format": "FRPO X9,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "X9",
+      "Values": [
+        {
+          "Options": {
+            "0": "Performs paper selection depending on media type.",
+            "1": "Performs paper selection depending on paper sources.",
+            "10": "Combination of value 2 and 8.",
+            "11": "Combination of value 1, 2 and 8.",
+            "2": "Performs paper selection which is compatible with HP-LJ8000.",
+            "3": "Combination of value 1 and 2.",
+            "8": "Performs paper selection in driver priority mode.",
+            "9": "Combination of value 1 and 8."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "PCL Paper Source"
+        }
+      ]
+    },
+    "Format": "FRPO X9,#1;"
+  },
+  "Y0": {
+    "Prescribe Command": "Y0",
+    "Text Description": "Name: Automatic continue for 'Press GO'\nFormat: FRPO Y0,#1;\nParameter: Y0\nThe command accepts the following arguments in Position #1: \n0 = Off\n1 = On\n",
+    "Original Entry": {
+      "Environment": "Automatic continue for 'Press GO'",
+      "Factory Setting": 0,
+      "Format": "FRPO Y0,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y0",
+      "Values": [
+        {
+          "Options": {
+            "0": "Off",
+            "1": "On"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO Y0,#1;"
+  },
+  "Y1": {
+    "Prescribe Command": "Y1",
+    "Text Description": "Name: Automatic continue timer\nFormat: FRPO Y1,#1;\nParameter: Y1\nThe command accepts the following arguments in Position #1: \nMin Value = 0 and Max value = 495\n",
+    "Original Entry": {
+      "Environment": "Automatic continue timer",
+      "Factory Setting": 6,
+      "Format": "FRPO Y1,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y1",
+      "Values": [
+        {
+          "Comment": "number from 000 to 495 in increments of 5 seconds",
+          "Position": 1,
+          "Type": "Range",
+          "max": 495,
+          "min": 0
+        }
+      ]
+    },
+    "Format": "FRPO Y1,#1;"
+  },
+  "Y2": {
+    "Prescribe Command": "Y2",
+    "Text Description": "Name: Quick fuser heater\nFormat: FRPO Y2,#1;\nParameter: Y2\nThe command accepts the following arguments in Position #1: \n0 = On\n1 = Off\n",
+    "Original Entry": {
+      "Environment": "Quick fuser heater",
+      "Factory Setting": "0 or 1",
+      "Format": "FRPO Y2,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y2",
+      "Values": [
+        {
+          "Options": {
+            "0": "On",
+            "1": "Off"
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "On/Off Configuration"
+        }
+      ]
+    },
+    "Format": "FRPO Y2,#1;"
+  },
+  "Y3": {
+    "Prescribe Command": "Y3",
+    "Text Description": "Name: Error message for device error\nFormat: FRPO Y3,#1;\nParameter: Y3\nThe command accepts the following arguments in Position #1: \n0 = Does not display an error message and pause the job when the device error occurs.\n1 = Displays an error message when duplex printing is not executed because ofa  possible limitation.\n10 = Combination of value 2 and 8.\n11 = Combination of value 1, 2 and 8.\n12 = Combination of value 4 and 8.\n13 = Combination of value 1, 4 and 8.\n14 = Combination of value 2, 4 and 8.\n15 = Combination of value 1, 2, 4 and 8.\n16 = Displays an error message when stapling, puching, offset or rotate collate is not executed because of a possible limitation except 2, 4 and 8.\n17 = Combination of value 1 and 16.\n18 = Combination of value 2 and 16.\n19 = Combination of value 1, 2 and 16.\n2 = Displays an error message and pause the job when running out of staples.\n20 = Combination of value 4 and 16.\n21 = Combination of value 1, 4 and 16.\n22 = Combination of value 2, 4 and 16.\n23 = Combination of value 1, 2, 4 and 16.\n24 = Combination of value 8 and 16.\n25 = Combination of value 1, 8 and 16.\n26 = Combination of value 2, 8 and 16.\n27 = Combination of value 1, 2, 8 and 16.\n28 = Combination of value 4, 8 and 16.\n29 = Combination of value 1, 4, 8 and 16.\n3 = Combination of value 1 and 2.\n30 = Combination of value 2, 4, 8 and 16.\n31 = Combination of value 1, 2, 4, 8 and 16.\n4 = Displays an error message and pause the job when the waste punch box is full.\n5 = Combination of value 1 and 4.\n6 = Combination of value 2 and 4.\n7 = Combination of value 1, 2 and 4.\n8 = Displays an error message and pause the job when the maximum number of stapling is exceeded.\n9 = Combination of value 1 and 8.\n",
+    "Original Entry": {
+      "Environment": "Error message for device error",
+      "Factory Setting": 0,
+      "Format": "FRPO Y3,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y3",
+      "Values": [
+        {
+          "Options": {
+            "0": "Does not display an error message and pause the job when the device error occurs.",
+            "1": "Displays an error message when duplex printing is not executed because ofa  possible limitation.",
+            "10": "Combination of value 2 and 8.",
+            "11": "Combination of value 1, 2 and 8.",
+            "12": "Combination of value 4 and 8.",
+            "13": "Combination of value 1, 4 and 8.",
+            "14": "Combination of value 2, 4 and 8.",
+            "15": "Combination of value 1, 2, 4 and 8.",
+            "16": "Displays an error message when stapling, puching, offset or rotate collate is not executed because of a possible limitation except 2, 4 and 8.",
+            "17": "Combination of value 1 and 16.",
+            "18": "Combination of value 2 and 16.",
+            "19": "Combination of value 1, 2 and 16.",
+            "2": "Displays an error message and pause the job when running out of staples.",
+            "20": "Combination of value 4 and 16.",
+            "21": "Combination of value 1, 4 and 16.",
+            "22": "Combination of value 2, 4 and 16.",
+            "23": "Combination of value 1, 2, 4 and 16.",
+            "24": "Combination of value 8 and 16.",
+            "25": "Combination of value 1, 8 and 16.",
+            "26": "Combination of value 2, 8 and 16.",
+            "27": "Combination of value 1, 2, 8 and 16.",
+            "28": "Combination of value 4, 8 and 16.",
+            "29": "Combination of value 1, 4, 8 and 16.",
+            "3": "Combination of value 1 and 2.",
+            "30": "Combination of value 2, 4, 8 and 16.",
+            "31": "Combination of value 1, 2, 4, 8 and 16.",
+            "4": "Displays an error message and pause the job when the waste punch box is full.",
+            "5": "Combination of value 1 and 4.",
+            "6": "Combination of value 2 and 4.",
+            "7": "Combination of value 1, 2 and 4.",
+            "8": "Displays an error message and pause the job when the maximum number of stapling is exceeded.",
+            "9": "Combination of value 1 and 8."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Error Message Handling"
+        }
+      ]
+    },
+    "Format": "FRPO Y3,#1;"
+  },
+  "Y4": {
+    "Prescribe Command": "Y4",
+    "Text Description": "Name: Duplex operation for specified paper type (Prepunched, Preprinted and Letterhead)\nFormat: FRPO Y4,#1;\nParameter: Y4\nThe command accepts the following arguments in Position #1: \n0 = Leaves the job as is when the job which the specified paper type is specified in simplex mode.\n1 = Adds blank pages and prints the job in duplex mode when the job which the specified paper type is specified in simplex mode.\n",
+    "Original Entry": {
+      "Environment": "Duplex operation for specified paper type (Prepunched, Preprinted and Letterhead)",
+      "Factory Setting": 0,
+      "Format": "FRPO Y4,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y4",
+      "Values": [
+        {
+          "Options": {
+            "0": "Leaves the job as is when the job which the specified paper type is specified in simplex mode.",
+            "1": "Adds blank pages and prints the job in duplex mode when the job which the specified paper type is specified in simplex mode."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "Custom Duplex Setting"
+        }
+      ]
+    },
+    "Format": "FRPO Y4,#1;"
+  },
+  "Y5": {
+    "Prescribe Command": "Y5",
+    "Text Description": "Name: Default operation for PDF direct printing\nFormat: FRPO Y5,#1;\nParameter: Y5\nThe command accepts the following arguments in Position #1: \n0 = Enlarges or reduces the image to fit in the current paper size. Loads paper from the current paper cassette.\n1 = Through the image. Loads paper which is the same size as the image.\n10 = Enlarges or reduces the image to fit in the current paper size. Loads Letter, Ledgeror Legal size paper depending on the image size.\n2 = Enlarges or reduces the image to fit in the current paper size. Loads Letter, A4 or A3 size paper depending on the image size.\n3 = Through the image. Loads Letter, A4 or A3 size paper depending on the image size.\n8 = Through the image. Loads paper from the current paper cassette.\n9 = Through the image. Loads Letter, Ledger or Legal size paper depending on the image size.\n",
+    "Original Entry": {
+      "Environment": "Default operation for PDF direct printing",
+      "Factory Setting": 0,
+      "Format": "FRPO Y5,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y5",
+      "Values": [
+        {
+          "Options": {
+            "0": "Enlarges or reduces the image to fit in the current paper size. Loads paper from the current paper cassette.",
+            "1": "Through the image. Loads paper which is the same size as the image.",
+            "10": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, Ledgeror Legal size paper depending on the image size.",
+            "2": "Enlarges or reduces the image to fit in the current paper size. Loads Letter, A4 or A3 size paper depending on the image size.",
+            "3": "Through the image. Loads Letter, A4 or A3 size paper depending on the image size.",
+            "8": "Through the image. Loads paper from the current paper cassette.",
+            "9": "Through the image. Loads Letter, Ledger or Legal size paper depending on the image size."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "PDF Direct Print Setting"
+        }
+      ]
+    },
+    "Format": "FRPO Y5,#1;"
+  },
+  "Y6": {
+    "Prescribe Command": "Y6",
+    "Text Description": "Name: e-MPS error\nFormat: FRPO Y6,#1;\nParameter: Y6\nThe command accepts the following arguments in Position #1: \n0 = Does not print the error report and display the error message.\n1 = Prints the error report.\n2 = Displays the error message.\n3 = Prints the error report and displays the error message.\n",
+    "Original Entry": {
+      "Environment": "e-MPS error",
+      "Factory Setting": 3,
+      "Format": "FRPO Y6,#1;",
+      "Interface": "Interface Independent",
+      "Parameter": "Y6",
+      "Values": [
+        {
+          "Options": {
+            "0": "Does not print the error report and display the error message.",
+            "1": "Prints the error report.",
+            "2": "Displays the error message.",
+            "3": "Prints the error report and displays the error message."
+          },
+          "Position": 1,
+          "Type": "Enum",
+          "Comment": "e-MPS Error"
+        }
+      ]
+    },
+    "Format": "FRPO Y6,#1;"
+  },
+  "STAT": {
+    "Prescribe Command": "STAT",
+    "Text Description": "Name: Prints a Status Page\nFormat: STAT #1;\nParameter: STAT\nThe command accepts the following arguments in Position #1: \n0 = Prints a User Status Page\n1 = Prints a Service Status Page\n",
+    "Original Entry": {
+      "Environment": "Prints a Status Page",
+      "Factory Setting": 0,
+      "Format": "STAT #1;",
+      "Interface": "None",
+      "Parameter": "STAT",
+      "Values": [
+        {
+          "Options": {
+            "0": "Prints a User Status Page",
+            "1": "Prints a Service Status Page"
+          },
+          "Type": "Enum"
+        }
+      ]
+    },
+    "Format": "STAT #1;"
+  }
+}
