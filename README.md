@@ -6,7 +6,7 @@
 ![FAISS](https://img.shields.io/badge/AI-FAISS%20%2B%20HuggingFace-yellow)
 ![Status](https://img.shields.io/badge/Status-Stable%2C%20Active%20Development-brightgreen)
 
-> **Note:** Source code is hosted on a privately hosted Gitea instance. This repository serves as a public-facing project reference. KCFG command support exists within the full project but is withheld from this public repository pending licensing clarification with Kyocera.
+> **Note:** Source code is hosted on a privately hosted Gitea instance. This repository serves as a public-facing project reference. KCFG command support exists within the full project but is withheld from this public repository pending licensing clarification with Kyocera. This will be updated with Major updates, not minor updates.
 
 **Author:** Zach Reid | [zforgehub.dev](https://zforgehub.dev)
 
